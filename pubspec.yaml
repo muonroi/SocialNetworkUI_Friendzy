@@ -1,0 +1,63 @@
+name: muonroi_friends
+description: "Project connect and look distant friends."
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_riverpod: ^2.4.10
+  dio: ^5.4.1
+  vietmap_flutter_gl: ^1.3.9
+  dartz: ^0.10.1
+  google_fonts: ^6.2.0
+  material_color_utilities: ^0.5.0
+  shared_preferences: ^2.2.2
+  intl: ^0.18.1
+  equatable: ^2.0.5
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+  google_sign_in: ^6.2.1
+  pin_code_fields: ^8.0.1
+  country_pickers: ^2.0.0
+  sms_autofill: ^2.3.1
+  staggered_grid_view_flutter: ^0.0.4
+  connectivity_plus: ^5.0.2
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+  fonts:     
+    - family: Poppins      
+      fonts:         
+        - asset: assets/fonts/Poppins-SemiBold.ttf          
+          weight: 600        
+        - asset: assets/fonts/Poppins-Regular.ttf          
+          weight: 400    
+    - family: Hellix      
+      fonts:         
+        - asset: assets/fonts/Hellix-ExtraBold.ttf          
+          weight: 800        
+        - asset: assets/fonts/Hellix-Medium.ttf          
+          weight: 400        
+        - asset: assets/fonts/Hellix-SemiBold.ttf          
+          weight: 600        
+        - asset: assets/fonts/Hellix-Bold.ttf          
+          weight: 700        
+        - asset: assets/fonts/Hellix-Regular.ttf          
+          weight: 400
