@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
 
@@ -18,6 +19,7 @@ class OnboardingThreeScreenState extends ConsumerState<OnboardingThreeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: theme.colorScheme.onErrorContainer.withOpacity(1),
         body: Container(
           width: double.maxFinite,
@@ -66,6 +68,8 @@ class OnboardingThreeScreenState extends ConsumerState<OnboardingThreeScreen> {
                   ),
                 ),
                 buttonTextStyle: CustomTextStyles.titleMediumWhite,
+                onPressed: () =>
+                    onTapScreenTitle(AppRoutes.loginPhoneNumberScreen),
               ),
               SizedBox(height: 16.v),
               CustomElevatedButton(

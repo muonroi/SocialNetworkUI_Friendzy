@@ -22,6 +22,7 @@ class OnboardingTwoScreenState extends ConsumerState<OnboardingTwoScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: theme.colorScheme.onErrorContainer.withOpacity(1),
         body: Container(
           width: double.maxFinite,
