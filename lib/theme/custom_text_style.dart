@@ -196,6 +196,13 @@ class CustomTextStyles {
         fontSize: 16.fSize,
         fontWeight: FontWeight.w700,
       );
+
+  static get titleMediumWhite => theme.textTheme.titleMedium!.copyWith(
+        color: appTheme.indigo50,
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w700,
+      );
+
   static get titleMediumPrimaryContainer =>
       theme.textTheme.titleMedium!.copyWith(
         color: theme.colorScheme.primaryContainer,
