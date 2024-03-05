@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_outlined_button.dart';
+import 'package:muonroi_friends/widget/onboarding/button/build_continue_widget.dart';
 part 'widgets/music_container_widget.dart';
-part 'widgets/continue_container_widget.dart';
 part 'widgets/signin_container_widget.dart';
 
 class OnboardingOneScreen extends ConsumerStatefulWidget {
@@ -64,9 +65,10 @@ class OnboardingOneScreenState extends ConsumerState<OnboardingOneScreen> {
             ),
           ),
           SizedBox(height: 30.v),
-          _buildContinueContainer(context),
+          buildContinueContainer(context, LocalizationKeys.lblContinue.name.tr,
+              () => onTapScreenTitle(AppRoutes.onboardingTwoScreen)),
           SizedBox(height: 16.v),
-          _buildSignInContainer(context),
+          _buildSignInContainer(context)
         ]),
       ),
     ));
