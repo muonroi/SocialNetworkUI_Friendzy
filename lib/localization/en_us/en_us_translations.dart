@@ -1,6 +1,7 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> enUs = {
+  LocalizationKeys.lblSearchPhoneCountryCode.name: "Select your phone code",
   LocalizationKeys.msgInteractWithPeople.name:
       "Interact with people with the same interest like you",
   LocalizationKeys.msgMakeFriendsWith.name:
@@ -326,4 +327,5 @@ final Map<String, String> enUs = {
       "You too! Seems we have same things in common here",
   LocalizationKeys.msgNetworkErr.name: "Network Error",
   LocalizationKeys.msgSomethingWentWrong.name: "Something Went Wrong!",
+  LocalizationKeys.lbl84.name: " 3333 56789",
 };
