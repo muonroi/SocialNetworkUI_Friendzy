@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
+import 'package:muonroi_friends/widget/app_bar/app_bar/appbar_leading_iconbutton.dart';
 
 // ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -34,7 +35,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: height ?? 40.v,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
-      leadingWidth: leadingWidth ?? 0,
+      leadingWidth: leadingWidth ?? 20,
       leading: leading,
       title: title,
       titleSpacing: 0,
@@ -48,4 +49,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         SizeUtils.width,
         height ?? 40.v,
       );
+}
+
+PreferredSizeWidget buildAppBar(BuildContext context) {
+  return CustomAppBar(
+      leadingWidth: double.maxFinite,
+      leading: AppbarLeadingIconbutton(
+          imagePath: ImageConstant.imgArrowLeft,
+          margin: EdgeInsets.only(right: 311.h),
+          onTap: () {
+            onTapArrowLeft(context);
+          }));
+}
+
+/// Navigates back to the previous screen.
+onTapArrowLeft(BuildContext context) {
+  NavigatorService.goBack();
 }

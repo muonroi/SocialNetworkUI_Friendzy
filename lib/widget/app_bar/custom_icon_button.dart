@@ -80,6 +80,21 @@ extension IconButtonStyleHelper on CustomIconButton {
           ),
         ],
       );
+  static BoxDecoration get outlineGray => BoxDecoration(
+        color: appTheme.gray400,
+        borderRadius: BorderRadius.circular(28.h),
+        boxShadow: [
+          BoxShadow(
+            color: theme.colorScheme.primary.withOpacity(0.2),
+            spreadRadius: 2.h,
+            blurRadius: 2.h,
+            offset: const Offset(
+              0,
+              8,
+            ),
+          ),
+        ],
+      );
   static BoxDecoration get fillPrimary => BoxDecoration(
         color: theme.colorScheme.primary,
         borderRadius: BorderRadius.circular(28.h),

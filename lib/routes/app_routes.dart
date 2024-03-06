@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/presentation/login_phone_number_screen/login_phone_number_screen.dart';
+import 'package:muonroi_friends/presentation/login_set_name_screen/login_set_name_screen.dart';
+import 'package:muonroi_friends/presentation/login_validate_otp_screen/login_validate_otp_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_one_screen/onboarding_one_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_three_screen/onboarding_three_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_two_screen/onboarding_two_screen.dart';
@@ -12,9 +14,9 @@ class AppRoutes {
   static const String onboardingTwoScreen = '/onboarding_two_screen';
   static const String onboardingThreeScreen = '/onboarding_three_screen';
   static const String loginPhoneNumberScreen = '/login_phone_number_screen';
-  // static const String createAccountOtpCodeScreen =
-  //     '/create_account_otp_code_screen';
-  // static const String createAccountNameScreen = '/create_account_name_screen';
+  static const String loginValidateOtpCodeScreen =
+      '/login_validate_otp_code_screen';
+  static const String loginSetNameScreen = '/login_set_name_screen';
   // static const String createAccountBirthdateScreen =
   //     '/create_account_birthdate_screen';
   // static const String createAccountGenderScreen =
@@ -66,5 +68,7 @@ class AppRoutes {
     onboardingTwoScreen: (context) => const OnboardingTwoScreen(),
     onboardingThreeScreen: (context) => const OnboardingThreeScreen(),
     loginPhoneNumberScreen: (context) => const LoginPhoneNumberScreen(),
+    loginValidateOtpCodeScreen: (context) => const LoginValidateOtpCodeScreen(),
+    loginSetNameScreen: (context) => const LoginSetNameScreen(),
   };
 }

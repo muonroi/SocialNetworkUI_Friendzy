@@ -1,6 +1,7 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> enUs = {
+  LocalizationKeys.msgInvalidNameOfUser.name: "Invalid your name",
   LocalizationKeys.msgInvalidPhoneNumber.name: "Invalid phone number",
   LocalizationKeys.lblSearchPhoneCountryCode.name: "Select your phone code",
   LocalizationKeys.msgInteractWithPeople.name:
