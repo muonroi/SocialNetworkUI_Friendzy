@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/presentation/login_phone_number/login_phone_number_screen.dart';
+import 'package:muonroi_friends/presentation/login_phone_number_screen/login_phone_number_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_one_screen/onboarding_one_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_three_screen/onboarding_three_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding_two_screen/onboarding_two_screen.dart';
-import 'package:muonroi_friends/presentation/spash_screen/spash_screen.dart';
+import 'package:muonroi_friends/presentation/splash_screen/splash_screen.dart';
 
 class AppRoutes {
   static const String initialRoute = '/initialRoute';
@@ -60,8 +60,8 @@ class AppRoutes {
   // static const String settingsScreen = '/settings_screen';
   // static const String appNavigationScreen = '/app_navigation_screen';
   static Map<String, WidgetBuilder> routes = {
-    spashScreen: (context) => const SpashScreen(),
-    initialRoute: (context) => const SpashScreen(),
+    spashScreen: (context) => const SplashScreen(),
+    initialRoute: (context) => const SplashScreen(),
     onboardingOneScreen: (context) => const OnboardingOneScreen(),
     onboardingTwoScreen: (context) => const OnboardingTwoScreen(),
     onboardingThreeScreen: (context) => const OnboardingThreeScreen(),

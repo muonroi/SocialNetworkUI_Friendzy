@@ -4,8 +4,7 @@ import 'package:country_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
-import 'package:muonroi_friends/main.dart';
-import 'package:muonroi_friends/presentation/login_phone_number/notifier/login_phone_number_notifier.dart';
+import 'package:muonroi_friends/presentation/login_phone_number_screen/notifier/login_phone_number_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/app_bar/appbar_leading_iconbutton.dart';
 import 'package:muonroi_friends/widget/app_bar/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
@@ -14,22 +13,27 @@ import 'package:muonroi_friends/widget/onboarding/button/build_continue_widget.d
 part 'widgets/build_appbar_widget.dart';
 part 'widgets/build_country_code_widget.dart';
 
-final countryProvider = StateProvider<Country>((ref) {
-  return Country(
-    isoCode: "VN",
-    phoneCode: "84",
-    name: "Vietnam",
-    iso3Code: "VNM",
-  );
-});
-
-class LoginPhoneNumberScreen extends StatefulWidget {
+class LoginPhoneNumberScreen extends ConsumerStatefulWidget {
   const LoginPhoneNumberScreen({super.key});
   @override
-  State<LoginPhoneNumberScreen> createState() => _LoginPhoneNumberScreenState();
+  LoginPhoneNumberScreenState createState() => LoginPhoneNumberScreenState();
 }
 
-class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
+class LoginPhoneNumberScreenState
+    extends ConsumerState<LoginPhoneNumberScreen> {
+  @override
+  void initState() {
+    _phoneValidationError = "";
+    super.initState();
+  }
+
+  bool validatePhoneNumber(String? phoneNumber) {
+    RegExp regex =
+        RegExp(r'^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$');
+    return regex.hasMatch(phoneNumber ?? "");
+  }
+
+  late String _phoneValidationError;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,6 +48,14 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
                       style: CustomTextStyles.headlineSmallPrimary),
                   SizedBox(height: 22.v),
                   Consumer(builder: (context, ref, _) {
+                    void updateEmailValidation(value) {
+                      setState(() {
+                        _phoneValidationError = validatePhoneNumber(value)
+                            ? "None"
+                            : LocalizationKeys.msgInvalidPhoneNumber.name.tr;
+                      });
+                    }
+
                     return Container(
                       decoration: BoxDecoration(
                         color:
@@ -77,6 +89,9 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
                                 right: 5.h,
                               ),
                               child: CustomTextFormField(
+                                controller: ref
+                                    .watch(loginPhoneNumberNotifier)
+                                    .phoneNumberController,
                                 borderDecoration: InputBorder.none,
                                 textInputType: TextInputType.phone,
                                 textStyle: CustomTextStyles.bodyLargePrimary,
@@ -88,15 +103,9 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
                                 ),
                                 contentPadding:
                                     EdgeInsets.symmetric(vertical: 1.v),
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return 'Please enter a phone number';
-                                  } else if (!RegExp(r'^\d{10}$')
-                                      .hasMatch(value)) {
-                                    return 'Please enter a valid 10-digit phone number';
-                                  }
-                                  return null;
-                                },
+                                onChanged: (value) =>
+                                    updateEmailValidation(value),
+                                errorMessage: _phoneValidationError,
                               ),
                             ),
                           ),
@@ -104,11 +113,24 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
                       ),
                     );
                   }),
+                  Container(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Text(
+                        _phoneValidationError != "None"
+                            ? _phoneValidationError
+                            : "",
+                        style: TextStyle(color: Colors.red, fontSize: 12.v)),
+                  ),
                   const Spacer(flex: 30),
                   buildContinueContainer(
-                      context,
-                      LocalizationKeys.lblContinue.name.tr,
-                      () => onTapScreenTitle(AppRoutes.onboardingThreeScreen)),
+                    context,
+                    LocalizationKeys.lblContinue.name.tr,
+                    () => debugPrint(ref
+                        .watch(loginPhoneNumberNotifier)
+                        .phoneNumberController
+                        ?.text),
+                    _phoneValidationError == "None",
+                  ),
                   const Spacer(flex: 69)
                 ]))));
   }

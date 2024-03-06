@@ -1,4 +1,5 @@
 enum LocalizationKeys {
+  msgInvalidPhoneNumber,
   lblSearchPhoneCountryCode,
   msgInteractWithPeople,
   msgMakeFriendsWith,

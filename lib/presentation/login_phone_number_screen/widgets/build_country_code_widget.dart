@@ -1,4 +1,4 @@
-part of '../../login_phone_number/login_phone_number_screen.dart';
+part of '../../login_phone_number_screen/login_phone_number_screen.dart';
 
 class CountryCode extends ConsumerStatefulWidget {
   const CountryCode({super.key});
