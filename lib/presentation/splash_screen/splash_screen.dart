@@ -5,14 +5,14 @@ import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
 
-class SpashScreen extends ConsumerStatefulWidget {
-  const SpashScreen({super.key});
+class SplashScreen extends ConsumerStatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  SpashScreenState createState() => SpashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class SpashScreenState extends ConsumerState<SpashScreen> {
+class SplashScreenState extends ConsumerState<SplashScreen> {
   @override
   initState() {
     super.initState();

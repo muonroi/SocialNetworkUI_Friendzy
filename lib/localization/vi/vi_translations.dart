@@ -1,8 +1,9 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> vi = {
+  LocalizationKeys.msgInvalidPhoneNumber.name: "Số điện thoại không hợp lệ",
   LocalizationKeys.lblSearchPhoneCountryCode.name: "Chọn mã vùng của bạn",
-  LocalizationKeys.lbl84.name: " 3333 56789",
+  LocalizationKeys.lbl84.name: "0 3333 56789",
   LocalizationKeys.msgInteractWithPeople.name:
       "Tương tác với những người có cùng sở thích với bạn",
   LocalizationKeys.msgMakeFriendsWith.name: "Kết bạn với những người giống bạn",

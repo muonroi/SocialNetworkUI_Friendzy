@@ -66,7 +66,8 @@ class OnboardingTwoScreenState extends ConsumerState<OnboardingTwoScreen> {
               buildContinueContainer(
                   context,
                   LocalizationKeys.lblContinue.name.tr,
-                  () => onTapScreenTitle(AppRoutes.onboardingThreeScreen)),
+                  () => onTapScreenTitle(AppRoutes.onboardingThreeScreen),
+                  true),
               SizedBox(height: 16.v),
               CustomElevatedButton(
                 text: LocalizationKeys.lblSignIn.name.tr,

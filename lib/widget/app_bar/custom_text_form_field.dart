@@ -2,31 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
-    Key? key,
-    this.alignment,
-    this.width,
-    this.scrollPadding,
-    this.controller,
-    this.focusNode,
-    this.autofocus = true,
-    this.textStyle,
-    this.obscureText = false,
-    this.textInputAction = TextInputAction.next,
-    this.textInputType = TextInputType.text,
-    this.maxLines,
-    this.hintText,
-    this.hintStyle,
-    this.prefix,
-    this.prefixConstraints,
-    this.suffix,
-    this.suffixConstraints,
-    this.contentPadding,
-    this.borderDecoration,
-    this.fillColor,
-    this.filled = false,
-    this.validator,
-  }) : super(
+  const CustomTextFormField(
+      {Key? key,
+      this.alignment,
+      this.width,
+      this.scrollPadding,
+      this.controller,
+      this.focusNode,
+      this.autofocus = true,
+      this.textStyle,
+      this.obscureText = false,
+      this.textInputAction = TextInputAction.next,
+      this.textInputType = TextInputType.text,
+      this.maxLines,
+      this.hintText,
+      this.hintStyle,
+      this.prefix,
+      this.prefixConstraints,
+      this.suffix,
+      this.suffixConstraints,
+      this.contentPadding,
+      this.borderDecoration,
+      this.fillColor,
+      this.filled = false,
+      this.onChanged,
+      this.customDecoration,
+      this.errorMessage})
+      : super(
           key: key,
         );
 
@@ -72,7 +74,11 @@ class CustomTextFormField extends StatelessWidget {
 
   final bool? filled;
 
-  final FormFieldValidator<String>? validator;
+  final void Function(String)? onChanged;
+
+  final InputDecoration? customDecoration;
+
+  final String? errorMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -86,20 +92,19 @@ class CustomTextFormField extends StatelessWidget {
 
   Widget textFormFieldWidget(BuildContext context) => SizedBox(
         width: width ?? double.maxFinite,
-        child: TextFormField(
-          scrollPadding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-          controller: controller,
-          focusNode: focusNode ?? FocusNode(),
-          autofocus: autofocus!,
-          style: textStyle ?? CustomTextStyles.bodyLargePurple200,
-          obscureText: obscureText!,
-          textInputAction: textInputAction,
-          keyboardType: textInputType,
-          maxLines: maxLines ?? 1,
-          decoration: decoration,
-          validator: validator,
-        ),
+        child: TextField(
+            scrollPadding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom),
+            controller: controller,
+            focusNode: focusNode ?? FocusNode(),
+            autofocus: autofocus!,
+            style: textStyle ?? CustomTextStyles.bodyLargePurple200,
+            obscureText: obscureText!,
+            textInputAction: textInputAction,
+            keyboardType: textInputType,
+            maxLines: maxLines ?? 1,
+            decoration: customDecoration ?? decoration,
+            onChanged: onChanged),
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? "",

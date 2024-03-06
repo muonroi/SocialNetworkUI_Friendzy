@@ -67,7 +67,7 @@ class OnboardingOneScreenState extends ConsumerState<OnboardingOneScreen> {
           ),
           SizedBox(height: 30.v),
           buildContinueContainer(context, LocalizationKeys.lblContinue.name.tr,
-              () => onTapScreenTitle(AppRoutes.onboardingTwoScreen)),
+              () => onTapScreenTitle(AppRoutes.onboardingTwoScreen), true),
           SizedBox(height: 16.v),
           _buildSignInContainer(context)
         ]),
