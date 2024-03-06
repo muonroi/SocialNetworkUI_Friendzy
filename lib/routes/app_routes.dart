@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/presentation/login_phone_number_screen/login_phone_number_screen.dart';
-import 'package:muonroi_friends/presentation/login_set_name_screen/login_set_name_screen.dart';
-import 'package:muonroi_friends/presentation/login_validate_otp_screen/login_validate_otp_screen.dart';
-import 'package:muonroi_friends/presentation/onboarding_one_screen/onboarding_one_screen.dart';
-import 'package:muonroi_friends/presentation/onboarding_three_screen/onboarding_three_screen.dart';
-import 'package:muonroi_friends/presentation/onboarding_two_screen/onboarding_two_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_phone_number_screen/login_phone_number_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_set_name_screen/login_set_name_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/login_validate_otp_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_one_screen/onboarding_one_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_three_screen/onboarding_three_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_two_screen/onboarding_two_screen.dart';
 import 'package:muonroi_friends/presentation/splash_screen/splash_screen.dart';
 
 class AppRoutes {

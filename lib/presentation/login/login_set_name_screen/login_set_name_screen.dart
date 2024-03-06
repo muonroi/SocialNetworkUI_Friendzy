@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
-import 'package:muonroi_friends/presentation/login_set_name_screen/notifier/login_set_name_notifier.dart';
+import 'package:muonroi_friends/presentation/login/login_set_name_screen/notifier/login_set_name_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_icon_button.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';

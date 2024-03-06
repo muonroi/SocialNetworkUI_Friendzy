@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/presentation/login_validate_otp_screen/models/login_validate_otp_model.dart';
+import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/models/login_validate_otp_model.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 part 'login_validate_otp_state.dart';
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
-import 'package:muonroi_friends/presentation/login_validate_otp_screen/notifier/login_validate_otp_notifier.dart';
+import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/notifier/login_validate_otp_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_pin_code_text_field.dart';

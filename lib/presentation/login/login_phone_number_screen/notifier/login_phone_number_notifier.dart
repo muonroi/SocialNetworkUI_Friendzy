@@ -3,7 +3,7 @@ import 'package:country_pickers/utils/utils.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/presentation/login_phone_number_screen/model/login_phone_number_model.dart';
+import 'package:muonroi_friends/presentation/login/login_phone_number_screen/model/login_phone_number_model.dart';
 part 'login_phone_number_state.dart';
 
 final loginPhoneNumberNotifier =
