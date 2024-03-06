@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_outlined_button.dart';
+import 'package:muonroi_friends/widget/custom_elevated_button.dart';
+import 'package:muonroi_friends/widget/custom_outlined_button.dart';
 import 'package:muonroi_friends/widget/onboarding/button/build_continue_widget.dart';
 part 'widgets/build_match_widget.dart';
 
@@ -67,7 +67,7 @@ class OnboardingTwoScreenState extends ConsumerState<OnboardingTwoScreen> {
                   context,
                   LocalizationKeys.lblContinue.name.tr,
                   () => onTapScreenTitle(AppRoutes.onboardingThreeScreen),
-                  true),
+                  false),
               SizedBox(height: 16.v),
               CustomElevatedButton(
                 text: LocalizationKeys.lblSignIn.name.tr,

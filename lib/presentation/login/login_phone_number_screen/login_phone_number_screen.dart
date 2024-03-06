@@ -6,9 +6,9 @@ import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_phone_number_screen/notifier/login_phone_number_notifier.dart';
-import 'package:muonroi_friends/widget/app_bar/app_bar/custom_app_bar.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_text_form_field.dart';
+import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
+import 'package:muonroi_friends/widget/custom_image_view.dart';
+import 'package:muonroi_friends/widget/custom_text_form_field.dart';
 import 'package:muonroi_friends/widget/onboarding/button/build_continue_widget.dart';
 part 'widgets/build_country_code_widget.dart';
 
@@ -126,7 +126,7 @@ class LoginPhoneNumberScreenState
                     LocalizationKeys.lblContinue.name.tr,
                     () =>
                         onTapScreenTitle(AppRoutes.loginValidateOtpCodeScreen),
-                    _phoneValidationError == "None",
+                    _phoneValidationError != "None",
                   ),
                   const Spacer(flex: 69)
                 ]))));

@@ -27,7 +27,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblNadiaLipsh.name: "Nadia Lipsh|",
   LocalizationKeys.msgWhatSYourName.name: "What’s your name?",
   LocalizationKeys.lbl2.name: "2",
-  LocalizationKeys.lbl201020.name: "20/10/20|",
+  LocalizationKeys.lbl201020.name: "20/10/1995",
   LocalizationKeys.lbl25.name: "2/5",
   LocalizationKeys.msgWhenIsYourBirthdate.name: "When is your birthdate?",
   LocalizationKeys.lbl3.name: "3",

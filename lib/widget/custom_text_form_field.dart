@@ -27,10 +27,16 @@ class CustomTextFormField extends StatelessWidget {
       this.filled = false,
       this.onChanged,
       this.customDecoration,
-      this.errorMessage})
+      this.errorMessage,
+      this.readOnly,
+      this.onTap})
       : super(
           key: key,
         );
+
+  final void Function()? onTap;
+
+  final bool? readOnly;
 
   final Alignment? alignment;
 
@@ -93,18 +99,21 @@ class CustomTextFormField extends StatelessWidget {
   Widget textFormFieldWidget(BuildContext context) => SizedBox(
         width: width ?? double.maxFinite,
         child: TextField(
-            scrollPadding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom),
-            controller: controller,
-            focusNode: focusNode ?? FocusNode(),
-            autofocus: autofocus!,
-            style: textStyle ?? CustomTextStyles.bodyLargePurple200,
-            obscureText: obscureText!,
-            textInputAction: textInputAction,
-            keyboardType: textInputType,
-            maxLines: maxLines ?? 1,
-            decoration: customDecoration ?? decoration,
-            onChanged: onChanged),
+          scrollPadding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          controller: controller,
+          focusNode: focusNode ?? FocusNode(),
+          autofocus: autofocus!,
+          style: textStyle ?? CustomTextStyles.bodyLargePurple200,
+          obscureText: obscureText!,
+          textInputAction: textInputAction,
+          keyboardType: textInputType,
+          maxLines: maxLines ?? 1,
+          decoration: customDecoration ?? decoration,
+          onChanged: onChanged,
+          readOnly: readOnly ?? false,
+          onTap: onTap,
+        ),
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? "",

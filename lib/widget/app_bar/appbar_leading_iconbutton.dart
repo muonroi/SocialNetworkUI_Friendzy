@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_icon_button.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
+import 'package:muonroi_friends/widget/custom_icon_button.dart';
+import 'package:muonroi_friends/widget/custom_image_view.dart';
 
 // ignore: must_be_immutable
-class AppbarTrailingIconbutton extends StatelessWidget {
-  AppbarTrailingIconbutton({
+class AppbarLeadingIconbutton extends StatelessWidget {
+  AppbarLeadingIconbutton({
     Key? key,
     this.imagePath,
     this.margin,
@@ -29,11 +29,10 @@ class AppbarTrailingIconbutton extends StatelessWidget {
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
         child: CustomIconButton(
-          height: 40.adaptSize,
-          width: 40.adaptSize,
-          decoration: IconButtonStyleHelper.outlinePrimaryTL24,
+          height: 30.adaptSize,
+          width: 30.adaptSize,
           child: CustomImageView(
-            imagePath: ImageConstant.imgIconPrimary48x48,
+            imagePath: ImageConstant.imgArrowLeft,
           ),
         ),
       ),

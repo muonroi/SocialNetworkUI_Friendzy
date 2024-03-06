@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
+import 'package:muonroi_friends/widget/custom_elevated_button.dart';
 
 /// Section Widget
 Widget buildContinueContainer(
