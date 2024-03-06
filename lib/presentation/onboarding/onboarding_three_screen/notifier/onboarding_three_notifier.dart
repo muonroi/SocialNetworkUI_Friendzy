@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:muonroi_friends/presentation/onboarding_three_screen/models/onboarding_three_model.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_three_screen/models/onboarding_three_model.dart';
 import '/core/app_export.dart';
 
 part 'onboarding_three_state.dart';

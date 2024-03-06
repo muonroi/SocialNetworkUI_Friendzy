@@ -4,7 +4,7 @@ import 'package:muonroi_friends/widget/app_bar/custom_elevated_button.dart';
 
 /// Section Widget
 Widget buildContinueContainer(
-    BuildContext context, String text, void Function()? onTap, bool isEnable) {
+    BuildContext context, String text, void Function()? onTap, bool isDisable) {
   return CustomElevatedButton(
       text: text,
       margin: EdgeInsets.symmetric(horizontal: 40.h),
@@ -13,6 +13,6 @@ Widget buildContinueContainer(
             fontSize: 16.adaptSize,
             fontWeight: FontWeight.w600,
           ),
-      isDisabled: !isEnable,
+      isDisabled: isDisable,
       onPressed: onTap);
 }

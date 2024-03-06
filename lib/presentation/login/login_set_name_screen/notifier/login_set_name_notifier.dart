@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/presentation/login_set_name_screen/models/login_set_name_model.dart';
+import 'package:muonroi_friends/presentation/login/login_set_name_screen/models/login_set_name_model.dart';
 
 part 'login_set_name_state.dart';
 
