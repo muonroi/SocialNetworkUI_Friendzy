@@ -4,7 +4,7 @@ import 'package:country_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_text_form_field.dart';
+import 'package:muonroi_friends/widget/custom_text_form_field.dart';
 
 // ignore: must_be_immutable
 class CustomPhoneNumber extends StatelessWidget {

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_set_name_screen/notifier/login_set_name_notifier.dart';
-import 'package:muonroi_friends/widget/app_bar/app_bar/custom_app_bar.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_icon_button.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_image_view.dart';
-import 'package:muonroi_friends/widget/app_bar/custom_text_form_field.dart';
+import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
+import 'package:muonroi_friends/widget/custom_icon_button.dart';
+import 'package:muonroi_friends/widget/custom_image_view.dart';
+import 'package:muonroi_friends/widget/custom_text_form_field.dart';
 
 class LoginSetNameScreen extends ConsumerStatefulWidget {
   const LoginSetNameScreen({Key? key}) : super(key: key);
@@ -91,7 +92,9 @@ class LoginSetNameScreenState extends ConsumerState<LoginSetNameScreen> {
                   ? IconButtonStyleHelper.outlineGray
                   : IconButtonStyleHelper.outlinePrimary,
               alignment: Alignment.topRight,
-              onTap: _nameValidationError != "None" ? null : () {},
+              onTap: _nameValidationError != "None"
+                  ? null
+                  : () => onTapScreenTitle(AppRoutes.loginBirthdateScreen),
               child: CustomImageView(
                   imagePath: ImageConstant.imgIconOnerrorcontainer),
             ),

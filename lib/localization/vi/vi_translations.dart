@@ -26,7 +26,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblNadiaLipsh.name: "Nadia Lipsh|",
   LocalizationKeys.msgWhatSYourName.name: "Tên của bạn là gì?",
   LocalizationKeys.lbl2.name: "2",
-  LocalizationKeys.lbl201020.name: "20/10/20|",
+  LocalizationKeys.lbl201020.name: "20/10/1995",
   LocalizationKeys.lbl25.name: "2/5",
   LocalizationKeys.msgWhenIsYourBirthdate.name: "Sinh nhật của bạn là khi nào?",
   LocalizationKeys.lbl3.name: "3",
