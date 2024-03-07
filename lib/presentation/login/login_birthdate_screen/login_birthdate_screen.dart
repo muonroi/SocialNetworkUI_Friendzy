@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/notifier/login_birthdate_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_birthdate_field.dart';
@@ -19,7 +20,7 @@ class LoginBirthdateScreenState extends ConsumerState<LoginBirthdateScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         appBar: buildAppBar(context),
         body: Container(
           width: double.maxFinite,
@@ -107,6 +108,7 @@ class LoginBirthdateScreenState extends ConsumerState<LoginBirthdateScreen> {
             decoration: IconButtonStyleHelper.outlinePrimary,
             child: CustomImageView(
                 imagePath: ImageConstant.imgIconOnerrorcontainer),
+            onTap: () => onTapScreenTitle(AppRoutes.loginGenderScreen),
           ),
         ),
       ],
