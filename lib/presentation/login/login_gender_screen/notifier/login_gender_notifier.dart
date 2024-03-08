@@ -13,6 +13,6 @@ class LoginGenderNotifier extends StateNotifier<LoginGenderState> {
   LoginGenderNotifier(LoginGenderState state) : super(state);
   void updateGender(Gender gender) {
     final selectedGender = LoginGenderModel(gender);
-    state = state.copyWith(selectedGender: selectedGender);
+    Future(() => {state = state.copyWith(selectedGender: selectedGender)});
   }
 }
