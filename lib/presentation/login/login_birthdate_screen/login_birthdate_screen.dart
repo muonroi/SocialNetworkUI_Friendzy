@@ -5,9 +5,8 @@ import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/notifier/login_birthdate_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_birthdate_field.dart';
-import 'package:muonroi_friends/widget/custom_icon_button.dart';
-import 'package:muonroi_friends/widget/custom_image_view.dart';
 import 'package:muonroi_friends/widget/custom_text_form_field.dart';
+import 'package:muonroi_friends/widget/login/build_step_widget.dart';
 
 class LoginBirthdateScreen extends ConsumerStatefulWidget {
   const LoginBirthdateScreen({Key? key}) : super(key: key);
@@ -51,11 +50,11 @@ class LoginBirthdateScreenState extends ConsumerState<LoginBirthdateScreen> {
                 readOnly: true,
                 controller: ref.watch(loginBirthdateNotifier).dateController,
                 hintText: LocalizationKeys.lbl201020.name.tr,
-                hintStyle: CustomTextStyles.bodyLargeGray400,
                 textInputAction: TextInputAction.done,
               ),
               const Spacer(flex: 15),
-              _buildTwentyFive(context),
+              buildStep(context, LocalizationKeys.lbl25.name.tr,
+                  () => onTapScreenTitle(AppRoutes.loginGenderScreen)),
               SizedBox(height: 15.v),
               Container(
                 height: 6.v,
@@ -78,40 +77,6 @@ class LoginBirthdateScreenState extends ConsumerState<LoginBirthdateScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _buildTwentyFive(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(top: 33.v),
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: LocalizationKeys.lbl25.name.tr,
-                  style: theme.textTheme.titleLarge,
-                ),
-              ],
-            ),
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(bottom: 2.v),
-          child: CustomIconButton(
-            height: 56.adaptSize,
-            width: 56.adaptSize,
-            padding: EdgeInsets.all(16.h),
-            decoration: IconButtonStyleHelper.outlinePrimary,
-            child: CustomImageView(
-                imagePath: ImageConstant.imgIconOnerrorcontainer),
-            onTap: () => onTapScreenTitle(AppRoutes.loginGenderScreen),
-          ),
-        ),
-      ],
     );
   }
 }
