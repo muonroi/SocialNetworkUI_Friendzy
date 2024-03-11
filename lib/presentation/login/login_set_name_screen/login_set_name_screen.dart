@@ -11,6 +11,7 @@ part 'widgets/build_set_icon_widget.dart';
 
 class LoginSetNameScreen extends ConsumerStatefulWidget {
   const LoginSetNameScreen({Key? key}) : super(key: key);
+
   @override
   LoginSetNameScreenState createState() => LoginSetNameScreenState();
 }

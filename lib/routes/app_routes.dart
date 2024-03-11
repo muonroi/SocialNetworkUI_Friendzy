@@ -4,6 +4,7 @@ import 'package:muonroi_friends/presentation/login/login_gender_screen/login_gen
 import 'package:muonroi_friends/presentation/login/login_interest_screen/login_interest_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_phone_number_screen/login_phone_number_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_set_name_screen/login_set_name_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_upload_screen/login_upload_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/login_validate_otp_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding/onboarding_one_screen/onboarding_one_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding/onboarding_three_screen/onboarding_three_screen.dart';
@@ -25,8 +26,7 @@ class AppRoutes {
   static const String loginGenderScreen = '/login_gender_screen';
   static const String loginSelectInterestScreen =
       '/login_select_interest_screen';
-  // static const String createAccountUploadPhotoScreen =
-  //     '/create_account_upload_photo_screen';
+  static const String loginUploadPhotoScreen = '/login_upload_photo_screen';
   // static const String loginEmptyStateScreen = '/login_empty_state_screen';
   // static const String loginActiveStateScreen = '/login_active_state_screen';
   // static const String loginOtpAuthenticationScreen =
@@ -75,5 +75,6 @@ class AppRoutes {
     loginBirthdateScreen: (context) => const LoginBirthdateScreen(),
     loginGenderScreen: (context) => const LoginGenderScreen(),
     loginSelectInterestScreen: (context) => const LoginSelectInterestScreen(),
+    loginUploadPhotoScreen: (context) => const LoginUploadPhotosScreen(),
   };
 }

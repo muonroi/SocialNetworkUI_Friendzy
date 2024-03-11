@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/models/login_select_interest_item_model.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/notifier/login_select_interest_notifier.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/widgets/interests_item_widget.dart';
@@ -40,7 +41,8 @@ class LoginSelectInterestScreenState
             SizedBox(height: 23.v),
             _buildInterests(context),
             const Spacer(flex: 15),
-            buildStep(context, LocalizationKeys.lbl45.name.tr, () {}),
+            buildStep(context, LocalizationKeys.lbl45.name.tr,
+                () => onTapScreenTitle(AppRoutes.loginUploadPhotoScreen)),
             SizedBox(height: 15.v),
             Container(
               height: 6.v,

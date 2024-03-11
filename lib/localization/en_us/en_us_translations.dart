@@ -250,7 +250,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblAroundMe.name: "Around me",
   LocalizationKeys.lblBerlin.name: "BERLIN",
   LocalizationKeys.lblBrandonAminoff.name: "Brandon Aminoff",
-  LocalizationKeys.lblChangePhoto.name: "Change Photo",
+  LocalizationKeys.lblChangePhoto.name: "Upload",
   LocalizationKeys.lblClara.name: "Clara 👋",
   LocalizationKeys.lblClara2.name: "Clara",
   LocalizationKeys.lblClaraHazel.name: "Clara Hazel",
