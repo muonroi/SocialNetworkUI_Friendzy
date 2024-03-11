@@ -17,6 +17,9 @@ class CustomTextStyles {
   static get bodyLargeGray600 => theme.textTheme.bodyLarge!.copyWith(
         color: appTheme.gray600,
       );
+  static get bodyLargeGray400 => theme.textTheme.bodyLarge!.copyWith(
+        color: appTheme.gray400,
+      );
   static get bodyLargeOnErrorContainer => theme.textTheme.bodyLarge!.copyWith(
         color: theme.colorScheme.onErrorContainer.withOpacity(1),
       );
@@ -196,6 +199,13 @@ class CustomTextStyles {
         fontSize: 16.fSize,
         fontWeight: FontWeight.w700,
       );
+
+  static get titleMediumWhite => theme.textTheme.titleMedium!.copyWith(
+        color: appTheme.indigo50,
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w700,
+      );
+
   static get titleMediumPrimaryContainer =>
       theme.textTheme.titleMedium!.copyWith(
         color: theme.colorScheme.primaryContainer,

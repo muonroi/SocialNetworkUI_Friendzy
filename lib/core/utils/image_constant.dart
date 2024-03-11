@@ -1,5 +1,8 @@
 class ImageConstant {
   static String imagePath = 'assets/images';
+  static String imgIconOnerrorcontainer16x16 = '$imagePath/photo16x16.png';
+  static String imgIconAdd = '$imagePath/IconAdd.png';
+  static String imgIndicator = '$imagePath/Indicator.png';
   static String imgWoman = '$imagePath/woman.png';
   static String imgVector = '$imagePath/img_vector.svg';
   static String imgContrast = '$imagePath/img_contrast.svg';

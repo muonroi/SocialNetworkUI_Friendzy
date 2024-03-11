@@ -1,4 +1,7 @@
 enum LocalizationKeys {
+  msgInvalidNameOfUser,
+  msgInvalidPhoneNumber,
+  lblSearchPhoneCountryCode,
   msgInteractWithPeople,
   msgMakeFriendsWith,
   msgFindYourPreferences,
@@ -216,6 +219,7 @@ enum LocalizationKeys {
   lbl379People,
   lbl32kPeople,
   lbl49,
+  lbl84,
   lbl47kPeople,
   lbl48KmAway,
   lbl80,

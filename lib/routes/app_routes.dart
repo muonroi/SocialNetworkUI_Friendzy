@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/presentation/onboarding_one_screen/onboarding_one_screen.dart';
-import 'package:muonroi_friends/presentation/spash_screen/spash_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_birthdate_screen/login_birthdate_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_gender_screen/login_gender_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_interest_screen/login_interest_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_phone_number_screen/login_phone_number_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_set_name_screen/login_set_name_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_upload_screen/login_upload_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/login_validate_otp_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_one_screen/onboarding_one_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_three_screen/onboarding_three_screen.dart';
+import 'package:muonroi_friends/presentation/onboarding/onboarding_two_screen/onboarding_two_screen.dart';
+import 'package:muonroi_friends/presentation/splash_screen/splash_screen.dart';
 
 class AppRoutes {
   static const String initialRoute = '/initialRoute';
   static const String spashScreen = '/spash_screen';
   static const String onboardingOneScreen = '/onboarding_one_screen';
-  // static const String onboardingTwoScreen = '/onboarding_two_screen';
-  // static const String onboardingThreeScreen = '/onboarding_three_screen';
-  // static const String createAccountPhoneNumberScreen =
-  //     '/create_account_phone_number_screen';
-  // static const String createAccountOtpCodeScreen =
-  //     '/create_account_otp_code_screen';
-  // static const String createAccountNameScreen = '/create_account_name_screen';
-  // static const String createAccountBirthdateScreen =
-  //     '/create_account_birthdate_screen';
-  // static const String createAccountGenderScreen =
-  //     '/create_account_gender_screen';
-  // static const String createAccountSelectInterestScreen =
-  //     '/create_account_select_interest_screen';
-  // static const String createAccountUploadPhotoScreen =
-  //     '/create_account_upload_photo_screen';
+  static const String onboardingTwoScreen = '/onboarding_two_screen';
+  static const String onboardingThreeScreen = '/onboarding_three_screen';
+  static const String loginPhoneNumberScreen = '/login_phone_number_screen';
+  static const String loginValidateOtpCodeScreen =
+      '/login_validate_otp_code_screen';
+  static const String loginSetNameScreen = '/login_set_name_screen';
+  static const String loginBirthdateScreen = '/login_birthdate_screen';
+
+  static const String loginGenderScreen = '/login_gender_screen';
+  static const String loginSelectInterestScreen =
+      '/login_select_interest_screen';
+  static const String loginUploadPhotoScreen = '/login_upload_photo_screen';
   // static const String loginEmptyStateScreen = '/login_empty_state_screen';
   // static const String loginActiveStateScreen = '/login_active_state_screen';
   // static const String loginOtpAuthenticationScreen =
@@ -58,8 +64,17 @@ class AppRoutes {
   // static const String settingsScreen = '/settings_screen';
   // static const String appNavigationScreen = '/app_navigation_screen';
   static Map<String, WidgetBuilder> routes = {
-    spashScreen: (context) => const SpashScreen(),
-    initialRoute: (context) => const SpashScreen(),
+    spashScreen: (context) => const SplashScreen(),
+    initialRoute: (context) => const SplashScreen(),
     onboardingOneScreen: (context) => const OnboardingOneScreen(),
+    onboardingTwoScreen: (context) => const OnboardingTwoScreen(),
+    onboardingThreeScreen: (context) => const OnboardingThreeScreen(),
+    loginPhoneNumberScreen: (context) => const LoginPhoneNumberScreen(),
+    loginValidateOtpCodeScreen: (context) => const LoginValidateOtpCodeScreen(),
+    loginSetNameScreen: (context) => const LoginSetNameScreen(),
+    loginBirthdateScreen: (context) => const LoginBirthdateScreen(),
+    loginGenderScreen: (context) => const LoginGenderScreen(),
+    loginSelectInterestScreen: (context) => const LoginSelectInterestScreen(),
+    loginUploadPhotoScreen: (context) => const LoginUploadPhotosScreen(),
   };
 }

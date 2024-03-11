@@ -1,6 +1,9 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> enUs = {
+  LocalizationKeys.msgInvalidNameOfUser.name: "Invalid your name",
+  LocalizationKeys.msgInvalidPhoneNumber.name: "Invalid phone number",
+  LocalizationKeys.lblSearchPhoneCountryCode.name: "Select your phone code",
   LocalizationKeys.msgInteractWithPeople.name:
       "Interact with people with the same interest like you",
   LocalizationKeys.msgMakeFriendsWith.name:
@@ -24,7 +27,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblNadiaLipsh.name: "Nadia Lipsh|",
   LocalizationKeys.msgWhatSYourName.name: "What’s your name?",
   LocalizationKeys.lbl2.name: "2",
-  LocalizationKeys.lbl201020.name: "20/10/20|",
+  LocalizationKeys.lbl201020.name: "20/10/1995",
   LocalizationKeys.lbl25.name: "2/5",
   LocalizationKeys.msgWhenIsYourBirthdate.name: "When is your birthdate?",
   LocalizationKeys.lbl3.name: "3",
@@ -247,7 +250,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblAroundMe.name: "Around me",
   LocalizationKeys.lblBerlin.name: "BERLIN",
   LocalizationKeys.lblBrandonAminoff.name: "Brandon Aminoff",
-  LocalizationKeys.lblChangePhoto.name: "Change Photo",
+  LocalizationKeys.lblChangePhoto.name: "Upload",
   LocalizationKeys.lblClara.name: "Clara 👋",
   LocalizationKeys.lblClara2.name: "Clara",
   LocalizationKeys.lblClaraHazel.name: "Clara Hazel",
@@ -326,4 +329,5 @@ final Map<String, String> enUs = {
       "You too! Seems we have same things in common here",
   LocalizationKeys.msgNetworkErr.name: "Network Error",
   LocalizationKeys.msgSomethingWentWrong.name: "Something Went Wrong!",
+  LocalizationKeys.lbl84.name: "0 3333 56789",
 };

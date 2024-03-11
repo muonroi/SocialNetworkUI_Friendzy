@@ -1,6 +1,10 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> vi = {
+  LocalizationKeys.msgInvalidNameOfUser.name: "Tên của bạn không hợp lệ",
+  LocalizationKeys.msgInvalidPhoneNumber.name: "Số điện thoại không hợp lệ",
+  LocalizationKeys.lblSearchPhoneCountryCode.name: "Chọn mã vùng của bạn",
+  LocalizationKeys.lbl84.name: "0 3333 56789",
   LocalizationKeys.msgInteractWithPeople.name:
       "Tương tác với những người có cùng sở thích với bạn",
   LocalizationKeys.msgMakeFriendsWith.name: "Kết bạn với những người giống bạn",
@@ -22,7 +26,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblNadiaLipsh.name: "Nadia Lipsh|",
   LocalizationKeys.msgWhatSYourName.name: "Tên của bạn là gì?",
   LocalizationKeys.lbl2.name: "2",
-  LocalizationKeys.lbl201020.name: "20/10/20|",
+  LocalizationKeys.lbl201020.name: "20/10/1995",
   LocalizationKeys.lbl25.name: "2/5",
   LocalizationKeys.msgWhenIsYourBirthdate.name: "Sinh nhật của bạn là khi nào?",
   LocalizationKeys.lbl3.name: "3",
@@ -250,7 +254,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblAroundMe.name: "Xung quanh tôi",
   LocalizationKeys.lblBerlin.name: "BERLIN",
   LocalizationKeys.lblBrandonAminoff.name: "Brandon Aminoff",
-  LocalizationKeys.lblChangePhoto.name: "Thay đổi ảnh",
+  LocalizationKeys.lblChangePhoto.name: "Tải lên",
   LocalizationKeys.lblClara.name: "Clara 👋",
   LocalizationKeys.lblClara2.name: "Clara",
   LocalizationKeys.lblClaraHazel.name: "Clara Hazel",
