@@ -254,7 +254,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblAroundMe.name: "Xung quanh tôi",
   LocalizationKeys.lblBerlin.name: "BERLIN",
   LocalizationKeys.lblBrandonAminoff.name: "Brandon Aminoff",
-  LocalizationKeys.lblChangePhoto.name: "Thay đổi ảnh",
+  LocalizationKeys.lblChangePhoto.name: "Tải lên",
   LocalizationKeys.lblClara.name: "Clara 👋",
   LocalizationKeys.lblClara2.name: "Clara",
   LocalizationKeys.lblClaraHazel.name: "Clara Hazel",

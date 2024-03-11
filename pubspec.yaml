@@ -32,6 +32,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   calendar_date_picker2: ^0.5.5
+  image_picker: ^1.0.7
+  mime_type: ^1.0.0
 
 dev_dependencies:
   flutter_test:
