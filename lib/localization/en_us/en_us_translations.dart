@@ -54,7 +54,7 @@ final Map<String, String> enUs = {
       "Your account is verified, let’s start make friends!",
   LocalizationKeys.lblOr.name: "OR",
   LocalizationKeys.msgLoginWithApple.name: "Login with Apple",
-  LocalizationKeys.lbl0130.name: "01.name:30",
+  LocalizationKeys.lbl0130.name: "01:30",
   LocalizationKeys.lbl132549546xxx.name: "+132549546xxx\n",
   LocalizationKeys.lblVerifyCode.name: "Verify Code",
   LocalizationKeys.lblVerifyLogin.name: "Verify Login",
