@@ -34,7 +34,6 @@ dependencies:
   calendar_date_picker2: ^0.5.5
   image_picker: ^1.0.7
   mime_type: ^1.0.0
-  timer_count_down: ^2.2.2
 
 dev_dependencies:
   flutter_test:

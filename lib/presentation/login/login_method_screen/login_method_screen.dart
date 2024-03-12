@@ -5,6 +5,7 @@ import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_method_screen/notifier/login_method_notifier.dart';
 import 'package:muonroi_friends/presentation/login/login_phone_number_screen/login_phone_number_screen.dart';
+import 'package:muonroi_friends/routes/arguments_key/arguments.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/custom_image_view.dart';
@@ -140,7 +141,9 @@ class LoginMethodScreenState extends ConsumerState<LoginMethodScreen> {
                     context,
                     LocalizationKeys.lblLogin.name.tr,
                     () =>
-                        onTapScreenTitle(AppRoutes.loginValidateOtpCodeScreen),
+                        onTapScreenTitle(AppRoutes.loginValidateOtpCodeScreen, {
+                      ArgumentsKey.loginMethod: true,
+                    }),
                     _phoneValidationError != "None",
                   ),
                   SizedBox(height: 16.v),

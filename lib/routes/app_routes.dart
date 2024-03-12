@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
+import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/make_friend_tab_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/login_birthdate_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_gender_screen/login_gender_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/login_interest_screen.dart';
@@ -29,7 +31,8 @@ class AppRoutes {
       '/login_select_interest_screen';
   static const String loginUploadPhotoScreen = '/login_upload_photo_screen';
   static const String loginMethodScreen = '/login_method_screen';
-  // static const String loginActiveStateScreen = '/login_active_state_screen';
+  static const String homeMakeFriendScreen = '/home_make_friend_screen';
+  static const String homeMakeFriendTabScreen = '/home_make_friend_tab_screen';
   // static const String loginOtpAuthenticationScreen =
   //     '/login_otp_authentication_screen';
   // static const String homeMakeFriendsPage = '/home_make_friends_page';
@@ -78,5 +81,7 @@ class AppRoutes {
     loginSelectInterestScreen: (context) => const LoginSelectInterestScreen(),
     loginUploadPhotoScreen: (context) => const LoginUploadPhotosScreen(),
     loginMethodScreen: (context) => const LoginMethodScreen(),
+    homeMakeFriendScreen: (context) => const HomeMakeFriendsScreen(),
+    homeMakeFriendTabScreen: (context) => const HomeMakeFriendsTabScreen(),
   };
 }

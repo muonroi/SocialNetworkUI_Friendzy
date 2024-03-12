@@ -4,8 +4,8 @@ import 'core/app_export.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
-void onTapScreenTitle(String routeName) {
-  NavigatorService.pushNamed(routeName);
+void onTapScreenTitle(String routeName, [dynamic arguments]) {
+  NavigatorService.pushNamed(routeName, arguments: arguments);
 }
 
 void main() {

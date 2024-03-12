@@ -7,7 +7,7 @@ import 'package:muonroi_friends/widget/custom_image_view.dart';
 class CustomBottomBar extends StatefulWidget {
   final Function onChanged;
 
-  const CustomBottomBar({super.key, required this.onChanged});
+  const CustomBottomBar({Key? key, required this.onChanged}) : super(key: key);
 
   @override
   CustomBottomBarState createState() => CustomBottomBarState();
@@ -17,6 +17,11 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   int selectedIndex = 0;
 
   List<BottomMenuModel> bottomMenuList = [
+    BottomMenuModel(
+      icon: ImageConstant.imgIconHome,
+      activeIcon: ImageConstant.imgIconHome,
+      type: BottomBarEnum.imgIconHome,
+    ),
     BottomMenuModel(
       icon: ImageConstant.imgIconPrimary24x24,
       activeIcon: ImageConstant.imgIconPrimary24x24,
@@ -45,18 +50,13 @@ class CustomBottomBarState extends State<CustomBottomBar> {
       height: 64.v,
       decoration: BoxDecoration(
         color: theme.colorScheme.onErrorContainer.withOpacity(1),
-        borderRadius: BorderRadius.circular(
-          32.h,
-        ),
+        borderRadius: BorderRadius.circular(32.h),
         boxShadow: [
           BoxShadow(
             color: appTheme.purple80026,
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: const Offset(
-              8,
-              0,
-            ),
+            offset: const Offset(4, 4),
           ),
         ],
       ),
@@ -70,32 +70,47 @@ class CustomBottomBarState extends State<CustomBottomBar> {
         type: BottomNavigationBarType.fixed,
         items: List.generate(bottomMenuList.length, (index) {
           return BottomNavigationBarItem(
-            icon: CustomImageView(
-              imagePath: bottomMenuList[index].icon,
-              height: 24.adaptSize,
-              width: 24.adaptSize,
-              color: theme.colorScheme.primary,
-            ),
-            activeIcon: CustomImageView(
-              imagePath: bottomMenuList[index].activeIcon,
-              height: 24.adaptSize,
-              width: 24.adaptSize,
-              color: theme.colorScheme.primary,
+            icon: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                  widget.onChanged.call(bottomMenuList[index].type);
+                });
+              },
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: selectedIndex == index
+                      ? appTheme.purple200 // Active color
+                      : Colors.transparent, // Inactive color
+                  borderRadius: BorderRadius.circular(100),
+                  border: Border.all(
+                    color: selectedIndex == index
+                        ? Colors.white
+                        : Colors.transparent,
+                    width: 2,
+                  ),
+                ),
+                child: CustomImageView(
+                  imagePath: selectedIndex == index
+                      ? bottomMenuList[index].activeIcon
+                      : bottomMenuList[index].icon,
+                  height: 24.adaptSize,
+                  width: 24.adaptSize,
+                  color: theme.colorScheme.primary,
+                ),
+              ),
             ),
             label: '',
           );
         }),
-        onTap: (index) {
-          selectedIndex = index;
-          widget.onChanged.call(bottomMenuList[index].type);
-          setState(() {});
-        },
       ),
     );
   }
 }
 
 enum BottomBarEnum {
+  imgIconHome,
   Iconprimary24x24,
   Icon24x24,
   Icon3,
@@ -110,9 +125,7 @@ class BottomMenuModel {
   });
 
   String icon;
-
   String activeIcon;
-
   BottomBarEnum type;
 }
 
