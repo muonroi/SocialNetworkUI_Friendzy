@@ -145,8 +145,7 @@ class ImageConstant {
 
   static String imgIconPrimary40x40 = '$imagePath/img_icon_primary_40x40.svg';
   static String imgIcon16x16 = '$imagePath/img_icon_16x16.svg';
-  static String imgIconOnerrorcontainer48x48 =
-      '$imagePath/img_icon_onerrorcontainer_48x48.svg';
+  static String imgIconOnerrorcontainer48x48 = '$imagePath/check.png';
   static String imgIconOnerrorcontainer40x40 =
       '$imagePath/img_icon_onerrorcontainer_40x40.svg';
   static String imgIcon40x40 = '$imagePath/img_icon_40x40.svg';
