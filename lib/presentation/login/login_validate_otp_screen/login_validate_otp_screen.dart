@@ -5,6 +5,7 @@ import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/notifier/login_validate_otp_notifier.dart';
+import 'package:muonroi_friends/routes/arguments_key/arguments.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/custom_pin_code_text_field.dart';
@@ -24,7 +25,7 @@ class LoginValidateOtpCodeScreenState
     _otpController = TextEditingController();
     final notifier = ref.read(loginValidateOtpCodeNotifier.notifier);
     notifier.initController(_otpController);
-    _secondsRemaining = 90; // 90 seconds
+    _secondsRemaining = 90;
     _startCountdownTimer();
     super.initState();
   }
@@ -52,11 +53,14 @@ class LoginValidateOtpCodeScreenState
   }
 
   late bool _isDisable;
-  late TextEditingController _otpController;
   late Timer _timer;
   late int _secondsRemaining;
+  late TextEditingController _otpController;
   @override
   Widget build(BuildContext context) {
+    final Map<String, dynamic> args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    final bool isLoginMethod = args[ArgumentsKey.loginMethod];
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -141,8 +145,9 @@ class LoginValidateOtpCodeScreenState
                               fontWeight: FontWeight.w600,
                             ),
                     isDisabled: _isDisable,
-                    onPressed: () =>
-                        onTapScreenTitle(AppRoutes.loginSetNameScreen),
+                    onPressed: () => onTapScreenTitle(!isLoginMethod
+                        ? AppRoutes.loginSetNameScreen
+                        : AppRoutes.homeMakeFriendTabScreen),
                   ),
                   SizedBox(height: 5.v)
                 ]))));
