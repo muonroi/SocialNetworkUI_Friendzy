@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
@@ -19,14 +21,40 @@ class LoginValidateOtpCodeScreenState
   @override
   void initState() {
     _isDisable = true;
-    super.initState();
     _otpController = TextEditingController();
     final notifier = ref.read(loginValidateOtpCodeNotifier.notifier);
     notifier.initController(_otpController);
+    _secondsRemaining = 90; // 90 seconds
+    _startCountdownTimer();
+    super.initState();
+  }
+
+  void _startCountdownTimer() {
+    const oneSecond = Duration(seconds: 1);
+    _timer = Timer.periodic(oneSecond, (timer) {
+      setState(() {
+        if (_secondsRemaining > 0) {
+          _secondsRemaining--;
+        } else {
+          _timer.cancel();
+        }
+      });
+    });
+  }
+
+  String _formatTime(int seconds) {
+    final minutes = (seconds / 60).floor();
+    final remainingSeconds = seconds % 60;
+    final formattedMinutes = minutes < 10 ? '0$minutes' : '$minutes';
+    final formattedSeconds =
+        remainingSeconds < 10 ? '0$remainingSeconds' : '$remainingSeconds';
+    return '$formattedMinutes:$formattedSeconds';
   }
 
   late bool _isDisable;
   late TextEditingController _otpController;
+  late Timer _timer;
+  late int _secondsRemaining;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -69,6 +97,27 @@ class LoginValidateOtpCodeScreenState
                               }
                             });
                       })),
+                  Container(
+                      width: 304.h,
+                      margin: EdgeInsets.only(left: 12.h, right: 11.h),
+                      child: RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text:
+                                    LocalizationKeys.msgEnterOtpCodeWe2.name.tr,
+                                style: CustomTextStyles.bodyLargeb24b164c),
+                            TextSpan(
+                                text: "Your phone number. ",
+                                style: CustomTextStyles.titleMediumff4b164c),
+                            TextSpan(
+                                text: LocalizationKeys
+                                    .msgThisCodeWillExpired.name.tr,
+                                style: CustomTextStyles.bodyLargeb24b164c),
+                            TextSpan(
+                                text: _formatTime(_secondsRemaining),
+                                style: CustomTextStyles.bodyLargeffdd88cf)
+                          ]),
+                          textAlign: TextAlign.center)),
                   SizedBox(height: 25.v),
                   RichText(
                       text: TextSpan(children: [

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/login_birthdate_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_gender_screen/login_gender_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/login_interest_screen.dart';
+import 'package:muonroi_friends/presentation/login/login_method_screen/login_method_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_phone_number_screen/login_phone_number_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_set_name_screen/login_set_name_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_upload_screen/login_upload_screen.dart';
@@ -27,7 +28,7 @@ class AppRoutes {
   static const String loginSelectInterestScreen =
       '/login_select_interest_screen';
   static const String loginUploadPhotoScreen = '/login_upload_photo_screen';
-  // static const String loginEmptyStateScreen = '/login_empty_state_screen';
+  static const String loginMethodScreen = '/login_method_screen';
   // static const String loginActiveStateScreen = '/login_active_state_screen';
   // static const String loginOtpAuthenticationScreen =
   //     '/login_otp_authentication_screen';
@@ -76,5 +77,6 @@ class AppRoutes {
     loginGenderScreen: (context) => const LoginGenderScreen(),
     loginSelectInterestScreen: (context) => const LoginSelectInterestScreen(),
     loginUploadPhotoScreen: (context) => const LoginUploadPhotosScreen(),
+    loginMethodScreen: (context) => const LoginMethodScreen(),
   };
 }

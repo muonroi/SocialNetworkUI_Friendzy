@@ -6,6 +6,7 @@ import 'package:muonroi_friends/presentation/login/login_upload_screen/models/lo
 import 'package:muonroi_friends/presentation/login/login_upload_screen/notifier/login_upload_photo_notifier.dart';
 import 'package:muonroi_friends/presentation/login/login_upload_screen/widgets/upload_photos_item_widget.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
+import 'package:muonroi_friends/widget/custom_verified.dart';
 import 'package:muonroi_friends/widget/login/build_step_widget.dart';
 
 class LoginUploadPhotosScreen extends ConsumerStatefulWidget {
@@ -215,6 +216,14 @@ class LoginUploadPhotosState extends ConsumerState<LoginUploadPhotosScreen> {
                         ref.read(loginUploadPhotoNotifier).copyWith(
                             loginUploadPhotoModelObj: LoginUploadPhotoModel(
                                 uploadPhotosItemList: loginUploadPhotoModels));
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return const AlertDialog(
+                              content: VerifiedWidget(),
+                            );
+                          },
+                        );
                       }),
                       SizedBox(height: 15.v),
                       Container(
