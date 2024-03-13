@@ -1,6 +1,9 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> vi = {
+  LocalizationKeys.msgUrlInvalid.name: "Đường dẫn không hợp lệ!",
+  LocalizationKeys.msgOutOfCard.name:
+      "Ops! Rất tiếc xung quanh đã hết người phù hợp!",
   LocalizationKeys.msgInvalidNameOfUser.name: "Tên của bạn không hợp lệ",
   LocalizationKeys.msgInvalidPhoneNumber.name: "Số điện thoại không hợp lệ",
   LocalizationKeys.lblSearchPhoneCountryCode.name: "Chọn mã vùng của bạn",
