@@ -33,6 +33,7 @@ class AppRoutes {
   static const String loginMethodScreen = '/login_method_screen';
   static const String homeMakeFriendScreen = '/home_make_friend_screen';
   static const String homeMakeFriendTabScreen = '/home_make_friend_tab_screen';
+  static const String homeSearchPartnersScreen = '/home_search_partners_screen';
   // static const String loginOtpAuthenticationScreen =
   //     '/login_otp_authentication_screen';
   // static const String homeMakeFriendsPage = '/home_make_friends_page';

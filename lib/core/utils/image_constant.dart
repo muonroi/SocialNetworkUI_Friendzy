@@ -38,5 +38,12 @@ class ImageConstant {
   static String imgIconOnerrorcontainer48x48 = '$imagePath/check.png';
   static String imgIconHome = '$imagePath/home.svg';
   static String imgTravelBackground = '$imagePath/travel_image.jpg';
+  static String imgIconFacebook = '$imagePath/facebook_icon.svg';
+  static String imgIconIg = '$imagePath/ig_icon.svg';
+  static String imgIconUnlike = '$imagePath/unlike.svg';
+  static String imgIconStar = '$imagePath/star.svg';
+  static String imgIconHeart = '$imagePath/heart.svg';
+  static String imgIconHeartParent = '$imagePath/heart_search_parent.svg';
+  static String imgIconSetting = '$imagePath/setting.svg';
   static String imageNotFound = 'assets/images/image_not_found.png';
 }

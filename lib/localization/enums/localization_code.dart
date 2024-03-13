@@ -305,4 +305,6 @@ enum LocalizationKeys {
   msgYouTooSeemsWe,
   msgNetworkErr,
   msgSomethingWentWrong,
+  msgOutOfCard,
+  msgUrlInvalid,
 }

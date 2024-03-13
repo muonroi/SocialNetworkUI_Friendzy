@@ -1,12 +1,22 @@
+import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
+import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/notifier/make_friend_tab_notifier.dart';
+import 'package:muonroi_friends/presentation/home/search_partners_screen/models/search_partners_model.dart';
+import 'package:muonroi_friends/presentation/home/search_partners_screen/search_parent_screen.dart';
 import 'package:muonroi_friends/widget/app_bar/appbar_title.dart';
 import 'package:muonroi_friends/widget/app_bar/appbar_trailing_iconbutton.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_bottom_bar.dart';
 import 'package:muonroi_friends/widget/custom_image_view.dart';
+
+part 'widgets/build_appbar.dart';
+part 'widgets/build_icon.dart';
+part 'widgets/build_tab_bar_view.dart';
+part 'widgets/build_bottom_appbar.dart';
+part 'widgets/build_search_partners_appbar.dart';
 
 class HomeMakeFriendsTabScreen extends ConsumerStatefulWidget {
   const HomeMakeFriendsTabScreen({Key? key})
@@ -27,13 +37,40 @@ class HomeMakeFriendsTabScreenState
   void initState() {
     super.initState();
     tabViewController = TabController(length: 2, vsync: this);
+    _screenSwipe = const [
+      HomeSearchPartnersScreen(HomeSearchPartnersModel(
+        id: 0,
+        name: 'Alfredo Calzoni',
+        address: 'HAMBURG, GERMANY',
+        age: 20,
+        images: [
+          'https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ],
+        distance: 2.6,
+        percentMatch: 75,
+      )),
+      HomeSearchPartnersScreen(HomeSearchPartnersModel(
+        id: 0,
+        name: 'Alfredo',
+        address: 'HAMBURG, USA',
+        age: 20,
+        images: [
+          'https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ],
+        distance: 3.6,
+        percentMatch: 80,
+      ))
+    ];
   }
 
+  late List<HomeSearchPartnersScreen> _screenSwipe;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: _buildAppBar(context),
+        appBar: ref.watch(tabStateProvider)
+            ? _buildAppBar(context)
+            : _buildSearchPartnersAppBar(context, ref),
         body: Container(
           width: double.maxFinite,
           padding: EdgeInsets.symmetric(vertical: 4.v),
@@ -46,20 +83,54 @@ class HomeMakeFriendsTabScreenState
                   width: double.maxFinite,
                   child: Column(
                     children: [
-                      _buildIcon(context),
+                      ref.watch(tabStateProvider)
+                          ? _buildIcon(context)
+                          : Container(),
                       SizedBox(height: 26.v),
-                      _buildTabView(context),
+                      _buildTabView(context, ref, tabViewController),
                       Expanded(
-                        child: SizedBox(
-                          height: 450.v,
-                          child: TabBarView(
-                            controller: tabViewController,
-                            children: const [
-                              HomeMakeFriendsScreen(),
-                              HomeMakeFriendsScreen(),
-                            ],
+                        child: Stack(children: [
+                          Positioned(
+                            top: 0,
+                            bottom: 0,
+                            right: 0,
+                            left: 0,
+                            child: Center(
+                              child: SizedBox(
+                                width: 350.v,
+                                height: 50,
+                                child: Text(
+                                  LocalizationKeys.msgOutOfCard.name.tr,
+                                  style: CustomTextStyles.bodyLargePrimary,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                          SizedBox(
+                            height: 520.v,
+                            child: TabBarView(
+                              controller: tabViewController,
+                              physics: const NeverScrollableScrollPhysics(),
+                              children: [
+                                const HomeMakeFriendsScreen(),
+                                AppinioSwiper(
+                                    invertAngleOnBottomDrag: true,
+                                    backgroundCardCount: _screenSwipe.length,
+                                    swipeOptions: const SwipeOptions.all(),
+                                    controller: ref
+                                        .watch(
+                                            homeMakeFriendsTabContainerNotifier)
+                                        .swiperController,
+                                    cardBuilder:
+                                        (BuildContext context, int index) {
+                                      return _screenSwipe[index];
+                                    },
+                                    cardCount: _screenSwipe.length),
+                              ],
+                            ),
+                          ),
+                        ]),
                       ),
                     ],
                   ),
@@ -72,331 +143,7 @@ class HomeMakeFriendsTabScreenState
           padding: EdgeInsets.all(24.h),
           child: _buildBottomBar(context),
         ),
-        //floatingActionButton: _buildFloatingActionButton(context),
       ),
-    );
-  }
-
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-      height: 56.v,
-      title: AppbarTitle(
-        text: LocalizationKeys.lblFriendzy.name.tr,
-        margin: EdgeInsets.only(left: 16.h),
-      ),
-      actions: [
-        AppbarTrailingIconbutton(
-          imagePath: ImageConstant.imgIconPrimary48x48,
-          margin: EdgeInsets.symmetric(
-            horizontal: 16.h,
-            vertical: 4.v,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildIcon(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.only(left: 16.h),
-      child: IntrinsicWidth(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(bottom: 1.v),
-              child: Column(
-                children: [
-                  Container(
-                    height: 60.adaptSize,
-                    width: 60.adaptSize,
-                    decoration: AppDecoration.fillGray400.copyWith(
-                      borderRadius: BorderRadiusStyle.circleBorder30,
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        SizedBox(height: 42.v),
-                        Container(
-                          height: 17.5.adaptSize,
-                          width: 17.5.adaptSize,
-                          padding: EdgeInsets.all(4.h),
-                          decoration: AppDecoration.outlineGray.copyWith(
-                            borderRadius: BorderRadiusStyle.roundedBorder8,
-                          ),
-                          child: CustomImageView(
-                            imagePath: ImageConstant.imgIconAdd,
-                            height: 10.adaptSize,
-                            width: 10.adaptSize,
-                            alignment: Alignment.center,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 9.v),
-                  Text(
-                    LocalizationKeys.lblMyStory.name.tr,
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 20.h,
-                bottom: 1.v,
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(3.h),
-                    decoration: AppDecoration.outlinePurple200.copyWith(
-                      borderRadius: BorderRadiusStyle.circleBorder30,
-                    ),
-                    child: Container(
-                      height: 56.adaptSize,
-                      width: 56.adaptSize,
-                      decoration: BoxDecoration(
-                        color: appTheme.gray400,
-                        borderRadius: BorderRadius.circular(
-                          28.h,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6.v),
-                  Text(
-                    LocalizationKeys.lblFabian.name.tr,
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 20.h,
-                bottom: 1.v,
-              ),
-              child: Column(
-                children: [
-                  Card(
-                    clipBehavior: Clip.antiAlias,
-                    elevation: 0,
-                    margin: const EdgeInsets.all(0),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: appTheme.purple200,
-                        width: 2.h,
-                      ),
-                      borderRadius: BorderRadiusStyle.circleBorder30,
-                    ),
-                    child: Container(
-                      height: 64.adaptSize,
-                      width: 64.adaptSize,
-                      padding: EdgeInsets.all(3.h),
-                      decoration: AppDecoration.outlinePurple200.copyWith(
-                        borderRadius: BorderRadiusStyle.circleBorder30,
-                      ),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          CustomImageView(
-                            imagePath: ImageConstant.imgArrowDown,
-                            height: 56.adaptSize,
-                            width: 56.adaptSize,
-                            radius: BorderRadius.circular(
-                              28.h,
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Container(
-                              height: 56.adaptSize,
-                              width: 56.adaptSize,
-                              decoration: BoxDecoration(
-                                color: appTheme.gray400,
-                                borderRadius: BorderRadius.circular(
-                                  28.h,
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: theme.colorScheme.onPrimary,
-                                    spreadRadius: 2.h,
-                                    blurRadius: 2.h,
-                                    offset: const Offset(
-                                      0,
-                                      0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6.v),
-                  Text(
-                    LocalizationKeys.lblClara2.name.tr,
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 20.h,
-                bottom: 1.v,
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(3.h),
-                    decoration: AppDecoration.outlinePurple200.copyWith(
-                      borderRadius: BorderRadiusStyle.circleBorder30,
-                    ),
-                    child: Container(
-                      height: 56.adaptSize,
-                      width: 56.adaptSize,
-                      decoration: BoxDecoration(
-                        color: appTheme.gray400,
-                        borderRadius: BorderRadius.circular(
-                          28.h,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6.v),
-                  Text(
-                    LocalizationKeys.lblFabian.name.tr,
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20.h),
-              child: Column(
-                children: [
-                  Card(
-                    clipBehavior: Clip.antiAlias,
-                    elevation: 0,
-                    margin: const EdgeInsets.all(0),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: appTheme.purple200,
-                        width: 2.h,
-                      ),
-                      borderRadius: BorderRadiusStyle.circleBorder30,
-                    ),
-                    child: Container(
-                      height: 64.adaptSize,
-                      width: 64.adaptSize,
-                      padding: EdgeInsets.all(3.h),
-                      decoration: AppDecoration.outlinePurple200.copyWith(
-                        borderRadius: BorderRadiusStyle.circleBorder30,
-                      ),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          CustomImageView(
-                            imagePath: ImageConstant.imgArrowDown,
-                            height: 56.adaptSize,
-                            width: 56.adaptSize,
-                            radius: BorderRadius.circular(
-                              28.h,
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Container(
-                              height: 56.adaptSize,
-                              width: 56.adaptSize,
-                              decoration: BoxDecoration(
-                                color: appTheme.gray400,
-                                borderRadius: BorderRadius.circular(
-                                  28.h,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 7.v),
-                  Text(
-                    LocalizationKeys.lblGeorge.name.tr,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTabView(BuildContext context) {
-    return Container(
-      height: 40.v,
-      width: 343.h,
-      decoration: BoxDecoration(
-        color: appTheme.purple5002,
-        borderRadius: BorderRadius.circular(
-          16.h,
-        ),
-      ),
-      child: TabBar(
-        controller: tabViewController,
-        labelPadding: EdgeInsets.zero,
-        labelColor: theme.colorScheme.primary,
-        labelStyle: TextStyle(
-          fontSize: 14.fSize,
-          fontFamily: 'Hellix',
-          fontWeight: FontWeight.w600,
-        ),
-        unselectedLabelColor: theme.colorScheme.primary,
-        unselectedLabelStyle: TextStyle(
-          fontSize: 14.fSize,
-          fontFamily: 'Hellix',
-          fontWeight: FontWeight.w600,
-        ),
-        indicator: BoxDecoration(
-          color: theme.colorScheme.onErrorContainer.withOpacity(1),
-          borderRadius: BorderRadius.circular(
-            16.h,
-          ),
-        ),
-        indicatorSize: TabBarIndicatorSize.tab,
-        tabs: [
-          Tab(
-            child: Text(
-              LocalizationKeys.lblMakeFriends.name.tr,
-            ),
-          ),
-          Tab(
-            child: Text(
-              LocalizationKeys.lblSearchPartners.name.tr,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildBottomBar(BuildContext context) {
-    return CustomBottomBar(
-      onChanged: (BottomBarEnum type) {},
     );
   }
 }
