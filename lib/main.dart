@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'core/app_export.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
-void onTapScreenTitle(String routeName) {
-  NavigatorService.pushNamed(routeName);
+void onTapScreenTitle(String routeName, [dynamic arguments]) {
+  NavigatorService.pushNamed(routeName, arguments: arguments);
 }
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
   Future.wait([
     SystemChrome.setPreferredOrientations([
