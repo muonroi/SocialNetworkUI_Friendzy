@@ -112,8 +112,8 @@ class CustomTextStyles {
         fontSize: 12.fSize,
       );
   static get bodySmallOnErrorContainer => theme.textTheme.bodySmall!.copyWith(
-        color: theme.colorScheme.onErrorContainer.withOpacity(1),
-      );
+      color: theme.colorScheme.onErrorContainer.withOpacity(1),
+      fontWeight: FontWeight.bold);
   static get bodySmallOnPrimaryContainer => theme.textTheme.bodySmall!.copyWith(
         color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
         fontSize: 12.fSize,

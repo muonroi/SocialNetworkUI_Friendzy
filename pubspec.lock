@@ -254,6 +254,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.1"
+  flutter_dotenv:
+    dependency: "direct main"
+    description:
+      name: flutter_dotenv
+      sha256: "9357883bdd153ab78cbf9ffa07656e336b8bbb2b5a3ca596b0b27e119f7c7d77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -923,13 +931,21 @@ packages:
     source: hosted
     version: "1.3.9"
   vietmap_gl_platform_interface:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: vietmap_gl_platform_interface
       sha256: f0a652230116677e855760b0b3d58cb3b30103d9da6317da83824ea4704a15c0
       url: "https://pub.dev"
     source: hosted
     version: "0.1.5"
+  vietmap_navigation_platform_interface:
+    dependency: "direct main"
+    description:
+      name: vietmap_navigation_platform_interface
+      sha256: "06c3de419c8bff2c42466cd239d709ac39a7b18bf2dd8e58264c4deab9862023"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   web:
     dependency: transitive
     description:

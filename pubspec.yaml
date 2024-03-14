@@ -37,6 +37,9 @@ dependencies:
   appinio_swiper: ^2.1.0
   carousel_slider: ^4.2.1
   url_launcher: ^6.2.5
+  vietmap_gl_platform_interface: ^0.1.5
+  vietmap_navigation_platform_interface: ^0.0.2
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +51,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - .env
   fonts:     
     - family: Poppins      
       fonts:         
