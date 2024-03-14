@@ -16,6 +16,9 @@ final homeMakeFriendsTabContainerNotifier = StateNotifierProvider<
 final tabStateProvider = StateProvider<bool>((ref) {
   return true;
 });
+final tabRootStateProvider = StateProvider<int>((ref) {
+  return 0;
+});
 
 class HomeMakeFriendsTabContainerNotifier
     extends StateNotifier<HomeMakeFriendsTabContainerState> {

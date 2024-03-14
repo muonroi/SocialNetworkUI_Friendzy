@@ -45,5 +45,9 @@ class ImageConstant {
   static String imgIconHeart = '$imagePath/heart.svg';
   static String imgIconHeartParent = '$imagePath/heart_search_parent.svg';
   static String imgIconSetting = '$imagePath/setting.svg';
+  static String imgIconDiscover = '$imagePath/discoverIcon.svg';
+  static String imgIconSearchDiscover = '$imagePath/searchDiscover.svg';
+  static String imgIconSettingDiscover = '$imagePath/settingDiscover.svg';
+  static String imgIconCurrentLocation = '$imagePath/current_location.png';
   static String imageNotFound = 'assets/images/image_not_found.png';
 }

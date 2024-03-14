@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/make_friend_tab_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/login_birthdate_screen.dart';
@@ -34,6 +35,7 @@ class AppRoutes {
   static const String homeMakeFriendScreen = '/home_make_friend_screen';
   static const String homeMakeFriendTabScreen = '/home_make_friend_tab_screen';
   static const String homeSearchPartnersScreen = '/home_search_partners_screen';
+  static const String discoverBaseScreen = '/discover_base_screen';
   // static const String loginOtpAuthenticationScreen =
   //     '/login_otp_authentication_screen';
   // static const String homeMakeFriendsPage = '/home_make_friends_page';
@@ -84,5 +86,6 @@ class AppRoutes {
     loginMethodScreen: (context) => const LoginMethodScreen(),
     homeMakeFriendScreen: (context) => const HomeMakeFriendsScreen(),
     homeMakeFriendTabScreen: (context) => const HomeMakeFriendsTabScreen(),
+    discoverBaseScreen: (context) => const DiscoverScreen(),
   };
 }
