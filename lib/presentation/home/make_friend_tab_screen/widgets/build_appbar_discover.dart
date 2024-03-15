@@ -39,13 +39,13 @@ PreferredSizeWidget _buildDiscoverAppBar(BuildContext context) {
     ),
     actions: [
       AppbarTrailingIconbutton(
-        imagePath: ImageConstant.imgIconSearchDiscover,
-        margin: EdgeInsets.only(
-          left: 16.h,
-          top: 5.v,
-          right: 2.h,
-        ),
-      ),
+          imagePath: ImageConstant.imgIconSearchDiscover,
+          margin: EdgeInsets.only(
+            left: 16.h,
+            top: 5.v,
+            right: 2.h,
+          ),
+          onTap: () => onTapScreenTitle(AppRoutes.discoverSearchScreen)),
       AppbarTrailingIconbutton(
           imagePath: ImageConstant.imgIconSettingDiscover,
           margin: EdgeInsets.only(
