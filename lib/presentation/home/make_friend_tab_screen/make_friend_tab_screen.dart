@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
+import 'package:muonroi_friends/presentation/discover/discover_filter_bottom_sheet/discover_filter_bottom_sheet.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/notifier/make_friend_tab_notifier.dart';
 import 'package:muonroi_friends/presentation/home/search_partners_screen/models/search_partners_model.dart';
