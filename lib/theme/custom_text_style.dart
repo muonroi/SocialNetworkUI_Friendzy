@@ -18,7 +18,10 @@ class CustomTextStyles {
         color: appTheme.gray600,
       );
   static get bodyLargeGray400 => theme.textTheme.bodyLarge!.copyWith(
-        color: appTheme.gray400,
+        color: appTheme.gray5001,
+      );
+  static get bodyMediumBoldWhite => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.gray5002,
       );
   static get bodyLargeOnErrorContainer => theme.textTheme.bodyLarge!.copyWith(
         color: theme.colorScheme.onErrorContainer.withOpacity(1),

@@ -79,7 +79,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblDiscover.name: "Khám phá",
   LocalizationKeys.lblGermany.name: "Đức",
   LocalizationKeys.lblNew.name: "MỚI",
-  LocalizationKeys.lbl10Km.name: "10km",
+  LocalizationKeys.lbl10Km.name: "10",
   LocalizationKeys.lbl2025.name: "20-25",
   LocalizationKeys.lblApply.name: "Áp dụng",
   LocalizationKeys.lblDating.name: "Hẹn hò",

@@ -101,10 +101,19 @@ class CustomCheckboxButton extends StatelessWidget {
             horizontal: -4,
           ),
           value: value ?? false,
-          checkColor: theme.colorScheme.onErrorContainer.withOpacity(1),
+          checkColor: appTheme.gray100,
           onChanged: (value) {
             onChange(value!);
           },
+          fillColor: MaterialStateProperty.resolveWith(
+              (states) => value! ? appTheme.purple200 : appTheme.gray5003),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+          ),
+          side: BorderSide(
+            color: appTheme.gray400,
+            width: 0.5,
+          ),
         ),
       );
 }

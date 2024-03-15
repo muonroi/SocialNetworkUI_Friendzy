@@ -47,13 +47,20 @@ PreferredSizeWidget _buildDiscoverAppBar(BuildContext context) {
         ),
       ),
       AppbarTrailingIconbutton(
-        imagePath: ImageConstant.imgIconSettingDiscover,
-        margin: EdgeInsets.only(
-          left: 16.h,
-          top: 5.v,
-          right: 18.h,
-        ),
-      ),
+          imagePath: ImageConstant.imgIconSettingDiscover,
+          margin: EdgeInsets.only(
+            left: 16.h,
+            top: 5.v,
+            right: 18.h,
+          ),
+          onTap: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const DiscoverFilterBottomSheet();
+              },
+            );
+          }),
     ],
   );
 }
