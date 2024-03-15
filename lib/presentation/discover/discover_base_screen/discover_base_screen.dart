@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/models/interest_item_model.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/models/new_user_item_model.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/notifier/discover_base_notifier.dart';

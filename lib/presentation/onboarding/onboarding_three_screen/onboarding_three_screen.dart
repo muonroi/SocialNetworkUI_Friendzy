@@ -92,7 +92,7 @@ class OnboardingThreeScreenState extends ConsumerState<OnboardingThreeScreen> {
                 buttonTextStyle: CustomTextStyles.titleMediumPrimary,
                 onPressed: () => onTapScreenTitle(AppRoutes.loginMethodScreen),
               ),
-              SizedBox(height: 34.v),
+              SizedBox(height: 20.v),
               RichText(
                 text: TextSpan(
                   children: [

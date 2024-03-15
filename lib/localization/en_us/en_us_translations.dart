@@ -80,7 +80,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblDiscover.name: "Discover",
   LocalizationKeys.lblGermany.name: "Germany",
   LocalizationKeys.lblNew.name: "NEW",
-  LocalizationKeys.lbl10Km.name: "10km",
+  LocalizationKeys.lbl10Km.name: "10",
   LocalizationKeys.lbl2025.name: "20-25",
   LocalizationKeys.lblApply.name: "Apply",
   LocalizationKeys.lblDating.name: "Dating",

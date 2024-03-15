@@ -10,13 +10,15 @@ Widget _buildInterest(BuildContext context) {
           LocalizationKeys.lblInterest.name.tr,
           style: CustomTextStyles.titleLargeOnPrimaryContainer,
         ),
-        Padding(
-          padding: EdgeInsets.only(bottom: 3.v),
-          child: Text(
-            LocalizationKeys.lblViewAll.name.tr,
-            style: CustomTextStyles.bodyLargePurple200,
-          ),
-        ),
+        GestureDetector(
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 3.v),
+              child: Text(
+                LocalizationKeys.lblViewAll.name.tr,
+                style: CustomTextStyles.bodyLargePurple200,
+              ),
+            ),
+            onTap: () => onTapScreenTitle(AppRoutes.discoverInterestScreen)),
       ],
     ),
   );
