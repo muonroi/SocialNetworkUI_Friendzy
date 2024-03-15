@@ -3,7 +3,7 @@ part of '../../search_partners_screen/search_parent_screen.dart';
 Widget _buildEncounters(BuildContext context,
     HomeSearchPartnersModel searchPartnersModel, WidgetRef ref) {
   return Container(
-    height: 510.v,
+    height: 500.v,
     width: 343.h,
     margin: EdgeInsets.symmetric(horizontal: 16.h),
     child: Stack(
