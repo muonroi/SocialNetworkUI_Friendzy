@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
+import 'package:muonroi_friends/presentation/discover/discover_interest_screen/discover_interest_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_search_screen/discover_search_screen.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
 import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/make_friend_tab_screen.dart';
@@ -38,40 +39,8 @@ class AppRoutes {
   static const String homeSearchPartnersScreen = '/home_search_partners_screen';
   static const String discoverBaseScreen = '/discover_base_screen';
   static const String discoverSearchScreen = '/discover_search_screen';
-  // static const String loginOtpAuthenticationScreen =
-  //     '/login_otp_authentication_screen';
-  // static const String homeMakeFriendsPage = '/home_make_friends_page';
-  // static const String homeMakeFriendsTabContainerScreen =
-  //     '/home_make_friends_tab_container_screen';
-  // static const String homeSearchPartnersPage = '/home_search_partners_page';
-  // static const String homeSearchPartnersSwipeRightPage =
-  //     '/home_search_partners_swipe_right_page';
-  // static const String homeSearchPartnersSwipeLeftPage =
-  //     '/home_search_partners_swipe_left_page';
-  // static const String homeSearchPartnersSwipeLeftTabContainerScreen =
-  //     '/home_search_partners_swipe_left_tab_container_screen';
-  // static const String discoverScreen = '/discover_screen';
-  // static const String discoverScrollSearchClickedPage =
-  //     '/discover_scroll_search_clicked_page';
-  // static const String discoverByInterestVoneScreen =
-  //     '/discover_by_interest_vone_screen';
-  // static const String discoverByInterestVtwoScreen =
-  //     '/discover_by_interest_vtwo_screen';
-  // static const String matchDatingScreen = '/match_dating_screen';
-  // static const String connectMakeFriendsScreen = '/connect_make_friends_screen';
-  // static const String matchesContainerScreen = '/matches_container_screen';
-  // static const String matchesPage = '/matches_page';
-  // static const String messagesScreen = '/messages_screen';
-  // static const String firstTimeChatScreen = '/first_time_chat_screen';
-  // static const String voiceChatScreen = '/voice_chat_screen';
-  // static const String voiceChatReplyScreen = '/voice_chat_reply_screen';
-  // static const String textChatScreen = '/text_chat_screen';
-  // static const String textChatReplyScreen = '/text_chat_reply_screen';
-  // static const String profileScreen = '/profile_screen';
-  // static const String editProfileScreen = '/edit_profile_screen';
-  // static const String languageScreen = '/language_screen';
-  // static const String settingsScreen = '/settings_screen';
-  // static const String appNavigationScreen = '/app_navigation_screen';
+  static const String discoverInterestScreen = '/discover_interest_screen';
+
   static Map<String, WidgetBuilder> routes = {
     spashScreen: (context) => const SplashScreen(),
     initialRoute: (context) => const SplashScreen(),
@@ -90,5 +59,6 @@ class AppRoutes {
     homeMakeFriendTabScreen: (context) => const HomeMakeFriendsTabScreen(),
     discoverBaseScreen: (context) => const DiscoverScreen(),
     discoverSearchScreen: (context) => const DiscoverScrollSearchClickedPage(),
+    discoverInterestScreen: (context) => const DiscoverByInterestScreen(),
   };
 }

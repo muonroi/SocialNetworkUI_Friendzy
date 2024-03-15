@@ -1,23 +1,23 @@
-import 'package:muonroi_friends/core/utils/image_constant.dart';
-
 class TravelItemModel {
   TravelItemModel({
-    this.ifYouCouldLive,
-    this.mirandaKehlani,
-    this.stuttgart,
-    this.icon,
-    this.id,
+    required this.postTitle,
+    required this.postImage,
+    required this.author,
+    required this.address,
+    required this.icon,
+    required this.id,
   }) {
-    ifYouCouldLive = ifYouCouldLive ??
-        "If you could live anywhere in the world, where would you pick?";
-    mirandaKehlani = mirandaKehlani ?? "Miranda Kehlani";
-    stuttgart = stuttgart ?? "STUTTGART";
-    icon = icon ?? ImageConstant.imgIvanaCajina7;
-    id = id ?? "";
+    postTitle = postTitle;
+    author = author;
+    address = address;
+    icon = icon;
+    id = id;
+    postImage = postImage;
   }
-  String? ifYouCouldLive;
-  String? mirandaKehlani;
-  String? stuttgart;
-  String? icon;
-  String? id;
+  String postTitle;
+  String postImage;
+  String author;
+  String address;
+  String icon;
+  String id;
 }

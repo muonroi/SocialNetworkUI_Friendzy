@@ -9,11 +9,15 @@ final homeMakeFriendsNotifier =
   (ref) => HomeMakeFriendsNotifier(HomeMakeFriendsState(
     homeMakeFriendsModelObj: HomeMakeFriendsModel(travelItemList: [
       TravelItemModel(
-          ifYouCouldLive:
-              "If you could live anywhere in the world, where would you pick?",
-          mirandaKehlani: "Miranda Kehlani",
-          stuttgart: "STUTTGART",
-          icon: ImageConstant.likeIcon)
+        id: '0',
+        postTitle:
+            "If you could live anywhere in the world, where would you pick?",
+        postImage:
+            'https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80',
+        author: "Miranda Kehlani",
+        address: "STUTTGART",
+        icon: ImageConstant.likeIcon,
+      )
     ]),
   )),
 );

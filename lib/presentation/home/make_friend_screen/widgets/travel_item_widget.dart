@@ -22,7 +22,7 @@ class TravelItemWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadiusStyle.roundedBorder24,
         image: DecorationImage(
-            image: AssetImage(ImageConstant.imgTravelBackground),
+            image: NetworkImage(travelItemModelObj.postImage),
             fit: BoxFit.cover),
       ),
       child: Column(
@@ -58,7 +58,7 @@ class TravelItemWidget extends StatelessWidget {
                         SizedBox(
                           width: 233.h,
                           child: Text(
-                            travelItemModelObj.ifYouCouldLive!,
+                            travelItemModelObj.postTitle,
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                             style: CustomTextStyles.titleLargeOnErrorContainer
@@ -79,7 +79,7 @@ class TravelItemWidget extends StatelessWidget {
                                     20.h,
                                   ),
                                   image: DecorationImage(
-                                    image: AssetImage(travelItemModelObj.icon!),
+                                    image: AssetImage(travelItemModelObj.icon),
                                   )),
                             ),
                             Padding(
@@ -91,12 +91,12 @@ class TravelItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    travelItemModelObj.mirandaKehlani!,
+                                    travelItemModelObj.author,
                                     style: theme.textTheme.titleSmall,
                                   ),
                                   SizedBox(height: 5.v),
                                   Text(
-                                    travelItemModelObj.stuttgart!,
+                                    travelItemModelObj.address,
                                     style: theme.textTheme.bodySmall!.copyWith(
                                       color: theme.colorScheme.background,
                                     ),
