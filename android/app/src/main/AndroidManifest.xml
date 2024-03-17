@@ -29,5 +29,11 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- Auto retreive SMS codes -->
+        <receiver android:exported="true" android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
