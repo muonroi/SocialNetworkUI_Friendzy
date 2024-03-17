@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
-import 'package:muonroi_friends/presentation/dating/dating_match_dating_screen/notifier/match_dating_notifier.dart';
+import 'package:muonroi_friends/presentation/dating/dating_match_screen/notifier/match_dating_notifier.dart';
 import 'package:muonroi_friends/widget/app_bar/custom_app_bar.dart';
 import 'package:muonroi_friends/widget/custom_elevated_button.dart';
 import 'package:muonroi_friends/widget/custom_image_view.dart';

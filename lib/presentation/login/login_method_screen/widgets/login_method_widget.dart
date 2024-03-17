@@ -1,4 +1,4 @@
-part of '../../login_method_screen/login_method_screen.dart';
+part of '../login_method_screen.dart';
 
 /// Section Widget
 Widget _buildLoginWithGoogle(BuildContext context) {

@@ -1,4 +1,4 @@
-part of '../../discover_filter_bottom_sheet/discover_filter_bottom_sheet.dart';
+part of '../discover_filter_bottom_sheet.dart';
 
 Widget _buildLocation(BuildContext context) {
   return Row(

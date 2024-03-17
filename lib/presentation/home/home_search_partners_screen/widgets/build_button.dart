@@ -1,4 +1,5 @@
-part of '../../home_search_partners_screen/home_search_parent_screen.dart';
+part of '../home_search_parent_screen.dart';
+
 Widget _buildButtons(BuildContext context, WidgetRef ref) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,

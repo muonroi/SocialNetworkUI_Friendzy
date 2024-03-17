@@ -1,4 +1,4 @@
-part of '../../onboarding_two_screen/onboarding_two_screen.dart';
+part of '../onboarding_two_screen.dart';
 
 /// Section Widget
 Widget _buildMatch(BuildContext context) {
