@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muonroi_friends/presentation/dating/dating_connect_friend_screen/dating_connect_friend_screen.dart';
 import 'package:muonroi_friends/presentation/dating/dating_match_screen/dating_match_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_interest_screen/discover_interest_screen.dart';
@@ -42,6 +43,8 @@ class AppRoutes {
   static const String discoverSearchScreen = '/discover_search_screen';
   static const String discoverInterestScreen = '/discover_interest_screen';
   static const String datingMatchScreen = '/dating_match_screen';
+  static const String datingConnectFriendScreen =
+      '/dating_connect_friend_screen';
 
   static Map<String, WidgetBuilder> routes = {
     spashScreen: (context) => const SplashScreen(),
@@ -62,6 +65,7 @@ class AppRoutes {
     discoverBaseScreen: (context) => const DiscoverScreen(),
     discoverSearchScreen: (context) => const DiscoverScrollSearchClickedPage(),
     discoverInterestScreen: (context) => const DiscoverByInterestScreen(),
-    datingMatchScreen: (context) => const MatchDatingScreen()
+    datingMatchScreen: (context) => const MatchDatingScreen(),
+    datingConnectFriendScreen: (context) => const ConnectMakeFriendsScreen(),
   };
 }
