@@ -1,6 +1,7 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dialog.dart';
 import 'package:country_pickers/utils/utils.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
@@ -34,6 +35,7 @@ class LoginPhoneNumberScreenState
   }
 
   late String _phoneValidationError;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -49,11 +51,13 @@ class LoginPhoneNumberScreenState
                   SizedBox(height: 22.v),
                   Consumer(builder: (context, ref, _) {
                     void updateEmailValidation(value) {
-                      setState(() {
-                        _phoneValidationError = validatePhoneNumber(value)
-                            ? "None"
-                            : LocalizationKeys.msgInvalidPhoneNumber.name.tr;
-                      });
+                      if (mounted) {
+                        setState(() {
+                          _phoneValidationError = validatePhoneNumber(value)
+                              ? "None"
+                              : LocalizationKeys.msgInvalidPhoneNumber.name.tr;
+                        });
+                      }
                     }
 
                     return Container(
@@ -125,8 +129,29 @@ class LoginPhoneNumberScreenState
                   buildContinueContainer(
                     context,
                     LocalizationKeys.lblContinue.name.tr,
-                    () => onTapScreenTitle(AppRoutes.loginValidateOtpCodeScreen,
-                        {ArgumentsKey.loginMethod: false}),
+                    () async {
+                      FirebaseAuth auth = FirebaseAuth.instance;
+                      await FirebaseAuth.instance.verifyPhoneNumber(
+                        phoneNumber: '+84 933 xx xxxx',
+                        verificationCompleted:
+                            (PhoneAuthCredential credential) async {
+                          await auth.signInWithCredential(credential);
+                        },
+                        verificationFailed: (FirebaseAuthException e) {},
+                        codeSent: (String verificationId, int? resendToken) {
+                          onTapScreenTitle(
+                              AppRoutes.loginValidateOtpCodeScreen, {
+                            ArgumentsKey.loginMethod: false,
+                            ArgumentsKey.verificationId: verificationId,
+                            ArgumentsKey.phoneNumber: ref
+                                .watch(loginPhoneNumberNotifier)
+                                .phoneNumberController!
+                                .text,
+                          });
+                        },
+                        codeAutoRetrievalTimeout: (String verificationId) {},
+                      );
+                    },
                     _phoneValidationError != "None",
                   ),
                   const Spacer(flex: 69)
