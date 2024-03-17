@@ -1,4 +1,4 @@
-part of '../../discover_base_screen/discover_base_screen.dart';
+part of '../discover_base_screen.dart';
 
 Widget _buildInterest(BuildContext context) {
   return Padding(

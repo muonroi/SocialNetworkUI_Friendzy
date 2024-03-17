@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/presentation/dating/dating_match_dating_screen/models/match_dating_model.dart';
+import 'package:muonroi_friends/presentation/dating/dating_match_screen/models/match_dating_model.dart';
 part 'match_dating_state.dart';
 
 final matchDatingNotifier =

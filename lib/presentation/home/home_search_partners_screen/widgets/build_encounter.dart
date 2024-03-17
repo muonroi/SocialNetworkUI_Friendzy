@@ -1,4 +1,4 @@
-part of '../../home_search_partners_screen/home_search_parent_screen.dart';
+part of '../home_search_parent_screen.dart';
 
 Widget _buildEncounters(BuildContext context,
     HomeSearchPartnersModel searchPartnersModel, WidgetRef ref) {

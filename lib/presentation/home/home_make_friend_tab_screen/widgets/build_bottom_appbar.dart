@@ -1,4 +1,4 @@
-part of '../../home_make_friend_tab_screen/home_make_friend_tab_screen.dart';
+part of '../home_make_friend_tab_screen.dart';
 
 Widget _buildBottomBar(
     BuildContext context, TabController tabViewController, WidgetRef ref) {

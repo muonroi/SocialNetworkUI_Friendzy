@@ -1,4 +1,4 @@
-part of '../../login_gender_screen/login_gender_screen.dart';
+part of '../login_gender_screen.dart';
 
 Widget _buildSelectGender(BuildContext context, WidgetRef ref) {
   return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
