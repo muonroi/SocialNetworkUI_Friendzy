@@ -45,7 +45,11 @@ dependencies:
   firebase_core: ^2.27.0
   firebase_auth: ^4.17.8
   firebase_app_check: ^0.2.1+17
-
+  sprintf: ^7.0.0
+  percent_indicator:
+    git:
+      url: https://github.com/muonroi/flutter_percent_indicator.git
+      ref: feature/add_function_return_percent_value
 dev_dependencies:
   flutter_test:
     sdk: flutter

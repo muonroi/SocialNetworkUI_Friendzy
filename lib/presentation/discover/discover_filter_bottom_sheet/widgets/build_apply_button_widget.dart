@@ -5,5 +5,6 @@ Widget _buildApply(BuildContext context) {
     width: 156.h,
     text: LocalizationKeys.lblApply.name.tr,
     buttonTextStyle: CustomTextStyles.bodyMediumBoldWhite,
+    onPressed: () => onTapScreenTitle(AppRoutes.datingMatchScreen),
   );
 }

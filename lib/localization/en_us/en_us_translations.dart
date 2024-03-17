@@ -103,7 +103,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblSendAMessage.name: "Send a message",
   LocalizationKeys.lblYouAnd.name: "You and ",
   LocalizationKeys.msgAlfredoLikedEach.name: "Alfredo liked each other!",
-  LocalizationKeys.msgYouAndAlfredo.name: "You and Alfredo liked each other!",
+  LocalizationKeys.msgYouAndAlfredo.name: " and %s liked each other!",
   LocalizationKeys.lblFromHamburg.name: " from Hamburg!",
   LocalizationKeys.lblLetsTalk.name: "Let’s talk",
   LocalizationKeys.msgYouAreConnected.name:
