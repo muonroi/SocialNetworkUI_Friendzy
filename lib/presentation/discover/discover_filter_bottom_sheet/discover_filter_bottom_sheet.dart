@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xlider/flutter_xlider.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/discover/discover_filter_bottom_sheet/notifier/discover_filter_notifier.dart';
 import 'package:muonroi_friends/widget/custom_checkbox_button.dart';
 import 'package:muonroi_friends/widget/custom_elevated_button.dart';

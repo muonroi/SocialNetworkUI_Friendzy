@@ -102,7 +102,7 @@ final Map<String, String> viVN = {
   LocalizationKeys.lblSendAMessage.name: "Gửi tin nhắn",
   LocalizationKeys.lblYouAnd.name: "Bạn và ",
   LocalizationKeys.msgAlfredoLikedEach.name: "Alfredo đã thích nhau!",
-  LocalizationKeys.msgYouAndAlfredo.name: "Bạn và Alfredo đã thích nhau!",
+  LocalizationKeys.msgYouAndAlfredo.name: " và %s đã thích nhau!",
   LocalizationKeys.lblFromHamburg.name: " từ Hamburg!",
   LocalizationKeys.lblLetsTalk.name: "Chúng ta nói chuyện đi",
   LocalizationKeys.msgYouAreConnected.name:

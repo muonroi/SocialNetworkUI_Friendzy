@@ -52,5 +52,7 @@ class ImageConstant {
   static String imgArrowRight = '$imagePath/img_arrow_right.svg';
   static String imgIconNumDistance = '$imagePath/num_distance.svg';
   static String imgIconNumAge = '$imagePath/num_age.svg';
+  static String imgIconSendMassage = '$imagePath/iconSendMessage.svg';
+  static String imgIconKeepSwiping = '$imagePath/keepSwipingIcon.svg';
   static String imageNotFound = 'assets/images/image_not_found.png';
 }

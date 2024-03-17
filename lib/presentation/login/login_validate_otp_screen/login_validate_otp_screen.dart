@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
@@ -62,8 +60,8 @@ class LoginValidateOtpCodeScreenState
     final Map<String, dynamic> args =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     final bool isLoginMethod = args[ArgumentsKey.loginMethod] as bool;
-    final String verifyOtp = args[ArgumentsKey.verificationId] as String;
-    final String phoneNumber = args[ArgumentsKey.phoneNumber] as String;
+    // final String verifyOtp = args[ArgumentsKey.verificationId] ?? "";
+    final String phoneNumber = args[ArgumentsKey.phoneNumber] ?? "";
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -149,12 +147,13 @@ class LoginValidateOtpCodeScreenState
                               ),
                       isDisabled: _isDisable,
                       onPressed: () async {
-                        FirebaseAuth auth = FirebaseAuth.instance;
-                        PhoneAuthCredential credential =
-                            PhoneAuthProvider.credential(
-                                verificationId: verifyOtp,
-                                smsCode: _otpController.text);
-                        await auth.signInWithCredential(credential);
+// FirebaseAuth auth = FirebaseAuth.instance;
+//                         PhoneAuthCredential credential =
+//                             PhoneAuthProvider.credential(
+//                                 verificationId: verifyOtp,
+//                                 smsCode: _otpController.text);
+//                         await auth.signInWithCredential(credential);
+
                         onTapScreenTitle(!isLoginMethod
                             ? AppRoutes.loginSetNameScreen
                             : AppRoutes.homeMakeFriendTabScreen);
