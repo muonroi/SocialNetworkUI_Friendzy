@@ -11,6 +11,9 @@ Widget _buildBottomBar(
         case BottomBarEnum.Iconprimary24x24:
           ref.read(tabRootStateProvider.notifier).state = type.index;
           break;
+        case BottomBarEnum.IconAdd:
+          ref.read(tabRootStateProvider.notifier).state = type.index;
+          break;
         case BottomBarEnum.Icon3:
           ref.read(tabRootStateProvider.notifier).state = type.index;
           break;

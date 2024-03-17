@@ -61,7 +61,8 @@ flutter:
     - assets/
     - assets/images/
     - .env
-  fonts:     
+  fonts:
+    
     - family: Poppins      
       fonts:         
         - asset: assets/fonts/Poppins-SemiBold.ttf          
@@ -80,3 +81,6 @@ flutter:
           weight: 700        
         - asset: assets/fonts/Hellix-Regular.ttf          
           weight: 400
+    - family: ChatMessage      
+      fonts:         
+        - asset: assets/fonts/ChatMessage.ttf          
