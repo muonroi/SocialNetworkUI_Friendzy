@@ -1,4 +1,4 @@
-part of '../../discover_filter_bottom_sheet/discover_filter_bottom_sheet.dart';
+part of '../discover_filter_bottom_sheet.dart';
 
 Widget _buildApply(BuildContext context) {
   return CustomElevatedButton(

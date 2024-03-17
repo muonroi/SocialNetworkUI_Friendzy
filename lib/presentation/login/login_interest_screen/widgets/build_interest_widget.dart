@@ -1,4 +1,4 @@
-part of '../../login_interest_screen/login_interest_screen.dart';
+part of '../login_interest_screen.dart';
 
 Widget _buildInterests(BuildContext context) {
   return Consumer(builder: (context, ref, _) {

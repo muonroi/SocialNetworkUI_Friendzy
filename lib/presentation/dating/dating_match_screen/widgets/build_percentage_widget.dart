@@ -1,4 +1,4 @@
-part of '../../dating_match_dating_screen/dating_match_dating_screen.dart';
+part of '../dating_match_screen.dart';
 
 Widget _buildPercentageWidget(
     BuildContext context, WidgetRef ref, MatchDatingState datingRef) {

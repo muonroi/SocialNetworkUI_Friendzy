@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/presentation/dating/dating_match_dating_screen/dating_match_dating_screen.dart';
+import 'package:muonroi_friends/presentation/dating/dating_match_screen/dating_match_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_interest_screen/discover_interest_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_search_screen/discover_search_screen.dart';

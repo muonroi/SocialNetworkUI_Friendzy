@@ -1,4 +1,4 @@
-part of '../../discover_search_screen/discover_search_screen.dart';
+part of '../discover_search_screen.dart';
 
 Widget _buildSearchBar(BuildContext context) {
   return Align(

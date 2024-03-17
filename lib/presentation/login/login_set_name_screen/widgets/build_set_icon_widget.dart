@@ -1,4 +1,4 @@
-part of '../../login_set_name_screen/login_set_name_screen.dart';
+part of '../login_set_name_screen.dart';
 
 /// Section Widget
 Widget _buildIcon(BuildContext context, String nameValidationError) {
