@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/presentation/dating/match_dating_screen/match_dating_screen.dart';
+import 'package:muonroi_friends/presentation/dating/dating_match_dating_screen/dating_match_dating_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_interest_screen/discover_interest_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_search_screen/discover_search_screen.dart';
-import 'package:muonroi_friends/presentation/home/make_friend_screen/make_friend_screen.dart';
-import 'package:muonroi_friends/presentation/home/make_friend_tab_screen/make_friend_tab_screen.dart';
+import 'package:muonroi_friends/presentation/home/home_make_friend_screen/home_make_friend_screen.dart';
+import 'package:muonroi_friends/presentation/home/home_make_friend_tab_screen/home_make_friend_tab_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_birthdate_screen/login_birthdate_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_gender_screen/login_gender_screen.dart';
 import 'package:muonroi_friends/presentation/login/login_interest_screen/login_interest_screen.dart';
