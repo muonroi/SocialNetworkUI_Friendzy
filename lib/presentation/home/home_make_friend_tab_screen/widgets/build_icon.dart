@@ -13,8 +13,8 @@ Widget _buildIcon(BuildContext context) {
             child: Column(
               children: [
                 Container(
-                  height: 60.adaptSize,
-                  width: 60.adaptSize,
+                  height: 65.adaptSize,
+                  width: 65.adaptSize,
                   decoration: AppDecoration.fillGray400.copyWith(
                     borderRadius: BorderRadiusStyle.circleBorder30,
                   ),

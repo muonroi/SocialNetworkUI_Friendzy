@@ -21,7 +21,7 @@ class SplashScreenState extends ConsumerState<SplashScreen> {
 
   void _navigateToNextScreen() {
     Timer(const Duration(seconds: 5), () {
-      onTapScreenTitle(AppRoutes.onboardingOneScreen);
+      onTapScreenTitle(AppRoutes.homeMakeFriendTabScreen);
     });
   }
 
