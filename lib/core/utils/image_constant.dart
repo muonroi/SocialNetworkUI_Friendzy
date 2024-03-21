@@ -52,5 +52,12 @@ class ImageConstant {
   static String imgIconSendMassage = '$imagePath/iconSendMessage.svg';
   static String imgIconKeepSwiping = '$imagePath/keepSwipingIcon.svg';
   static String imgIconTalk = '$imagePath/talkIcon.svg';
+  static String imgIconCloseProfile = '$imagePath/close.svg';
+  static String imgIconStartProfile = '$imagePath/startProfile.svg';
+  static String imgIconHeartProfile = '$imagePath/heartProfile.svg';
+
+  static String imgIconMeasure = '$imagePath/measure.svg';
+  static String imgIconLanguage = '$imagePath/language.svg';
+  static String imgIconCalendar = '$imagePath/calendar.svg';
   static String imageNotFound = '$imagePath/image_not_found.png';
 }

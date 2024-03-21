@@ -4,6 +4,7 @@ import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/dating/dating_matches_screen/dating_matches_screen.dart';
+import 'package:muonroi_friends/presentation/dating/dating_profile_detail_screen/dating_profile_detail_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_base_screen/discover_base_screen.dart';
 import 'package:muonroi_friends/presentation/discover/discover_filter_bottom_sheet/discover_filter_bottom_sheet.dart';
 import 'package:muonroi_friends/presentation/home/home_make_friend_screen/home_make_friend_screen.dart';
@@ -28,6 +29,7 @@ part 'widgets/build_appbar_discover.dart';
 part 'widgets/build_home_screen_widget.dart';
 part 'widgets/build_appbar_matches.dart';
 part 'widgets/build_type_appbar.dart';
+part 'widgets/build_appbar_detail_friend.dart';
 
 class HomeMakeFriendsTabScreen extends ConsumerStatefulWidget {
   const HomeMakeFriendsTabScreen({Key? key})
@@ -89,9 +91,7 @@ class HomeMakeFriendsTabScreenState
             children: [
               _buildHomeScreen(context, ref, _tabViewController, _screenSwipe),
               const DiscoverScreen(),
-              Container(
-                color: Colors.amber,
-              ),
+              const DatingProfileDetailScreen(),
               buildMatchesScreen(context),
               Container(
                 color: Colors.red,
