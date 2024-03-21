@@ -12,7 +12,7 @@ PreferredSizeWidget _buildTypeAppbar(BuildContext context, WidgetRef ref) {
       case 1:
         return _buildDiscoverAppBar(context);
       case 2:
-        return _buildMatchesAppBar(context);
+        return _buildDetailFriendAppBar(context);
       case 3:
         return _buildMatchesAppBar(context);
     }

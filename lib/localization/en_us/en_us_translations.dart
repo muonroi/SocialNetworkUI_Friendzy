@@ -1,6 +1,7 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> enUs = {
+  LocalizationKeys.lblMatch.name: "Match",
   LocalizationKeys.msgUrlInvalid.name: "Invalid path!",
   LocalizationKeys.msgOutOfCard.name:
       "Ops! There are no suitable people around!",

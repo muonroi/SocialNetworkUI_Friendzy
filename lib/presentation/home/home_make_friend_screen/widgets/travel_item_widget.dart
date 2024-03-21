@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/home/home_make_friend_screen/models/travel_item_model.dart';
 import 'package:muonroi_friends/widget/custom_icon_button.dart';
 import 'package:muonroi_friends/widget/custom_image_view.dart';
@@ -158,15 +159,16 @@ class TravelItemWidget extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 7.h),
                               child: CustomIconButton(
-                                height: 40.adaptSize,
-                                width: 40.adaptSize,
-                                padding: EdgeInsets.all(10.h),
-                                decoration:
-                                    IconButtonStyleHelper.fillOnErrorContainer,
-                                child: CustomImageView(
-                                  imagePath: ImageConstant.imgIcon40x40,
-                                ),
-                              ),
+                                  height: 40.adaptSize,
+                                  width: 40.adaptSize,
+                                  padding: EdgeInsets.all(10.h),
+                                  decoration: IconButtonStyleHelper
+                                      .fillOnErrorContainer,
+                                  child: CustomImageView(
+                                    imagePath: ImageConstant.imgIcon40x40,
+                                  ),
+                                  onTap: () => onTapScreenTitle(
+                                      AppRoutes.datingProfileDetailScreen)),
                             ),
                           ],
                         ),
