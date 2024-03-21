@@ -28,10 +28,7 @@ class ImageConstant {
   static String imgThumbsUp = '$imagePath/img_thumbs_up.svg';
   static String imgMusic = '$imagePath/music.png';
   static String imgFashion = '$imagePath/fashion.png';
-  static String imgIconPrimary24x24 = '$imagePath/img_icon_primary_24x24.svg';
   static String imgIcon24x24 = '$imagePath/img_icon_24x24.svg';
-  static String imgIcon3 = '$imagePath/img_icon_3.svg';
-  static String imgSearchPrimary = '$imagePath/img_search_primary.svg';
   static String imgRewind = '$imagePath/img_rewind.svg';
   static String imgArrowLeft = '$imagePath/img_arrow_left.svg';
   static String imgIconPrimary48x48 = '$imagePath/img_icon_primary_48x48.svg';
@@ -52,5 +49,15 @@ class ImageConstant {
   static String imgArrowRight = '$imagePath/img_arrow_right.svg';
   static String imgIconNumDistance = '$imagePath/num_distance.svg';
   static String imgIconNumAge = '$imagePath/num_age.svg';
-  static String imageNotFound = 'assets/images/image_not_found.png';
+  static String imgIconSendMassage = '$imagePath/iconSendMessage.svg';
+  static String imgIconKeepSwiping = '$imagePath/keepSwipingIcon.svg';
+  static String imgIconTalk = '$imagePath/talkIcon.svg';
+  static String imgIconCloseProfile = '$imagePath/close.svg';
+  static String imgIconStartProfile = '$imagePath/startProfile.svg';
+  static String imgIconHeartProfile = '$imagePath/heartProfile.svg';
+
+  static String imgIconMeasure = '$imagePath/measure.svg';
+  static String imgIconLanguage = '$imagePath/language.svg';
+  static String imgIconCalendar = '$imagePath/calendar.svg';
+  static String imageNotFound = '$imagePath/image_not_found.png';
 }

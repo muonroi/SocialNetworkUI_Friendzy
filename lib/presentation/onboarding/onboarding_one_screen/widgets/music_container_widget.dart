@@ -1,4 +1,4 @@
-part of '../../onboarding_one_screen/onboarding_one_screen.dart';
+part of '../onboarding_one_screen.dart';
 
 /// Section Widget
 Widget _buildMusicContainer(BuildContext context) {

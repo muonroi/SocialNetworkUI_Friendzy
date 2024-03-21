@@ -1,3 +1,5 @@
+import 'package:muonroi_friends/localization/vi/vi_translations.dart';
+
 import 'en_us/en_us_translations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,7 +10,10 @@ class AppLocalization {
 
   Locale locale;
 
-  static final Map<String, Map<String, String>> _localizedValues = {'en': enUs};
+  static final Map<String, Map<String, String>> _localizedValues = {
+    'en': enUs,
+    'vi': viVN
+  };
 
   static AppLocalization of() {
     return Localizations.of<AppLocalization>(

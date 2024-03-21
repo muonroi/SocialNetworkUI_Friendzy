@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
@@ -60,7 +59,9 @@ class LoginValidateOtpCodeScreenState
   Widget build(BuildContext context) {
     final Map<String, dynamic> args =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
-    final bool isLoginMethod = args[ArgumentsKey.loginMethod];
+    final bool isLoginMethod = args[ArgumentsKey.loginMethod] as bool;
+    // final String verifyOtp = args[ArgumentsKey.verificationId] ?? "";
+    final String phoneNumber = args[ArgumentsKey.phoneNumber] ?? "";
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -111,7 +112,7 @@ class LoginValidateOtpCodeScreenState
                                     LocalizationKeys.msgEnterOtpCodeWe2.name.tr,
                                 style: CustomTextStyles.bodyLargeb24b164c),
                             TextSpan(
-                                text: "Your phone number. ",
+                                text: phoneNumber,
                                 style: CustomTextStyles.titleMediumff4b164c),
                             TextSpan(
                                 text: LocalizationKeys
@@ -136,19 +137,27 @@ class LoginValidateOtpCodeScreenState
                       textAlign: TextAlign.left),
                   SizedBox(height: 70.v),
                   CustomElevatedButton(
-                    text: LocalizationKeys.lblVerify.name.tr,
-                    margin: EdgeInsets.symmetric(horizontal: 17.h),
-                    buttonTextStyle:
-                        Theme.of(context).textTheme.labelLarge!.copyWith(
-                              color: appTheme.indigo50,
-                              fontSize: 16.adaptSize,
-                              fontWeight: FontWeight.w600,
-                            ),
-                    isDisabled: _isDisable,
-                    onPressed: () => onTapScreenTitle(!isLoginMethod
-                        ? AppRoutes.loginSetNameScreen
-                        : AppRoutes.homeMakeFriendTabScreen),
-                  ),
+                      text: LocalizationKeys.lblVerify.name.tr,
+                      margin: EdgeInsets.symmetric(horizontal: 17.h),
+                      buttonTextStyle:
+                          Theme.of(context).textTheme.labelLarge!.copyWith(
+                                color: appTheme.indigo50,
+                                fontSize: 16.adaptSize,
+                                fontWeight: FontWeight.w600,
+                              ),
+                      isDisabled: _isDisable,
+                      onPressed: () async {
+// FirebaseAuth auth = FirebaseAuth.instance;
+//                         PhoneAuthCredential credential =
+//                             PhoneAuthProvider.credential(
+//                                 verificationId: verifyOtp,
+//                                 smsCode: _otpController.text);
+//                         await auth.signInWithCredential(credential);
+
+                        onTapScreenTitle(!isLoginMethod
+                            ? AppRoutes.loginSetNameScreen
+                            : AppRoutes.homeMakeFriendTabScreen);
+                      }),
                   SizedBox(height: 5.v)
                 ]))));
   }

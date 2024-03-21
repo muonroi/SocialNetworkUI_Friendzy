@@ -1,8 +1,7 @@
 // ignore_for_file: constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:muonroi_friends/core/app_export.dart';
-import 'package:muonroi_friends/widget/custom_image_view.dart';
+import 'custom_chat.dart';
 
 class CustomBottomBar extends StatefulWidget {
   final Function onChanged;
@@ -20,23 +19,58 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   int currentIndex = 0;
   List<BottomMenuModel> bottomMenuList = [
     BottomMenuModel(
-      icon: ImageConstant.imgIconHome,
-      activeIcon: ImageConstant.imgIconHome,
+      icon: Icon(
+        Icons.home_outlined,
+        color: theme.colorScheme.primary,
+      ),
+      activeIcon: Icon(
+        Icons.home,
+        color: appTheme.gray5003,
+      ),
       type: BottomBarEnum.imgIconHome,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgIconPrimary24x24,
-      activeIcon: ImageConstant.imgIconPrimary24x24,
+      icon: Icon(
+        Icons.explore_outlined,
+        color: theme.colorScheme.primary,
+      ),
+      activeIcon: Icon(
+        Icons.explore,
+        color: appTheme.gray5003,
+      ),
       type: BottomBarEnum.Iconprimary24x24,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgIcon3,
-      activeIcon: ImageConstant.imgIcon3,
+      icon: Icon(
+        Icons.add,
+        color: theme.colorScheme.primary,
+      ),
+      activeIcon: Icon(
+        Icons.add,
+        color: appTheme.gray5003,
+      ),
+      type: BottomBarEnum.IconAdd,
+    ),
+    BottomMenuModel(
+      icon: Icon(
+        Icons.people_outline,
+        color: theme.colorScheme.primary,
+      ),
+      activeIcon: Icon(
+        Icons.people,
+        color: appTheme.gray5003,
+      ),
       type: BottomBarEnum.Icon3,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgSearchPrimary,
-      activeIcon: ImageConstant.imgSearchPrimary,
+      icon: Icon(
+        ChatMessage.chatEmpty,
+        color: theme.colorScheme.primary,
+      ),
+      activeIcon: Icon(
+        ChatMessage.chat,
+        color: appTheme.gray5003,
+      ),
       type: BottomBarEnum.Searchprimary,
     )
   ];
@@ -78,26 +112,25 @@ class CustomBottomBarState extends State<CustomBottomBar> {
             )));
   }
 
-  Widget buildTab(int index, int selectedIndex, e) {
+  Widget buildTab(int index, int selectedIndex, BottomMenuModel e) {
     return Tab(
       child: Container(
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-          color:
-              selectedIndex == index ? appTheme.purple200 : Colors.transparent,
-          borderRadius: BorderRadius.circular(100),
-          border: Border.all(
-            color: selectedIndex == index ? Colors.white : Colors.transparent,
-            width: 2,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: selectedIndex == index
+                ? appTheme.purple200
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(100),
+            border: Border.all(
+              color: selectedIndex == index ? Colors.white : Colors.transparent,
+              width: 2,
+            ),
           ),
-        ),
-        child: CustomImageView(
-          imagePath: selectedIndex == index ? e.activeIcon : e.icon,
-          height: 24.adaptSize,
-          width: 24.adaptSize,
-          color: theme.colorScheme.primary,
-        ),
-      ),
+          child: SizedBox(
+            height: 28.adaptSize,
+            width: 28.adaptSize,
+            child: selectedIndex == index ? e.activeIcon : e.icon,
+          )),
     );
   }
 }
@@ -105,6 +138,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
 enum BottomBarEnum {
   imgIconHome,
   Iconprimary24x24,
+  IconAdd,
   Icon3,
   Searchprimary,
 }
@@ -116,33 +150,7 @@ class BottomMenuModel {
     required this.type,
   });
 
-  String icon;
-  String activeIcon;
+  Icon icon;
+  Icon activeIcon;
   BottomBarEnum type;
-}
-
-class DefaultWidget extends StatelessWidget {
-  const DefaultWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffffffff),
-      padding: const EdgeInsets.all(10),
-      child: const Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Please replace the respective Widget here',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

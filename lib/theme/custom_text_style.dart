@@ -20,6 +20,7 @@ class CustomTextStyles {
   static get bodyLargeGray400 => theme.textTheme.bodyLarge!.copyWith(
         color: appTheme.gray5001,
       );
+
   static get bodyMediumBoldWhite => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray5002,
       );
@@ -220,6 +221,21 @@ class CustomTextStyles {
         fontSize: 16.fSize,
         fontWeight: FontWeight.w700,
       );
+
+  static get titleMediumPurple200Bold => theme.textTheme.titleMedium!.copyWith(
+        color: appTheme.purple200,
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w700,
+        fontStyle: FontStyle.normal,
+      );
+
+  static get titleMediumWhite200Bold => theme.textTheme.titleMedium!.copyWith(
+        color: appTheme.gray5002,
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w700,
+        fontStyle: FontStyle.normal,
+      );
+
   static get titleMediumff22172a => theme.textTheme.titleMedium!.copyWith(
         color: const Color(0XFF22172A),
         fontSize: 16.fSize,

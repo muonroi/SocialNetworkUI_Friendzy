@@ -1,6 +1,7 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
-final Map<String, String> vi = {
+final Map<String, String> viVN = {
+  LocalizationKeys.lblMatch.name: "Tương đồng",
   LocalizationKeys.msgUrlInvalid.name: "Đường dẫn không hợp lệ!",
   LocalizationKeys.msgOutOfCard.name:
       "Ops! Rất tiếc xung quanh đã hết người phù hợp!",
@@ -102,7 +103,7 @@ final Map<String, String> vi = {
   LocalizationKeys.lblSendAMessage.name: "Gửi tin nhắn",
   LocalizationKeys.lblYouAnd.name: "Bạn và ",
   LocalizationKeys.msgAlfredoLikedEach.name: "Alfredo đã thích nhau!",
-  LocalizationKeys.msgYouAndAlfredo.name: "Bạn và Alfredo đã thích nhau!",
+  LocalizationKeys.msgYouAndAlfredo.name: " và %s đã thích nhau!",
   LocalizationKeys.lblFromHamburg.name: " từ Hamburg!",
   LocalizationKeys.lblLetsTalk.name: "Chúng ta nói chuyện đi",
   LocalizationKeys.msgYouAreConnected.name:

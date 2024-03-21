@@ -1,4 +1,4 @@
-part of '../../discover_interest_screen/discover_interest_screen.dart';
+part of '../discover_interest_screen.dart';
 
 class InterestPeople extends StatelessWidget {
   const InterestPeople({
