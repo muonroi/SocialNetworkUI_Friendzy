@@ -33,7 +33,6 @@ class ImageConstant {
   static String imgArrowLeft = '$imagePath/img_arrow_left.svg';
   static String imgIconPrimary48x48 = '$imagePath/img_icon_primary_48x48.svg';
   static String imgIconOnerrorcontainer48x48 = '$imagePath/check.png';
-  static String imgIconHome = '$imagePath/home.svg';
   static String imgTravelBackground = '$imagePath/travel_image.jpg';
   static String imgIconFacebook = '$imagePath/facebook_icon.svg';
   static String imgIconIg = '$imagePath/ig_icon.svg';
@@ -59,5 +58,6 @@ class ImageConstant {
   static String imgIconMeasure = '$imagePath/measure.svg';
   static String imgIconLanguage = '$imagePath/language.svg';
   static String imgIconCalendar = '$imagePath/calendar.svg';
+  static String imgIconChatBackground = '$imagePath/group_chat_background.svg';
   static String imageNotFound = '$imagePath/image_not_found.png';
 }
