@@ -5,7 +5,7 @@ class MatchesItemModel {
     this.icon,
     this.id,
   }) {
-    icon = icon ?? ImageConstant.imgIconHome;
+    icon = icon ?? ImageConstant.imgFashion;
     id = id ?? "";
   }
   String? icon;

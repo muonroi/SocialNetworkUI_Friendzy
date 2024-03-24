@@ -52,6 +52,8 @@ dependencies:
       ref: feature/add_function_return_percent_value
   flutter_image_slideshow: ^0.1.6
   bottom_sheet: ^4.0.1
+  flutter_touch_ripple: ^1.1.21
+  video_player: ^2.8.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

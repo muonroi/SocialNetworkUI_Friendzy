@@ -9,16 +9,16 @@ part 'dating_matches_state.dart';
 final matchesNotifier = StateNotifierProvider<MatchesNotifier, MatchesState>(
     (ref) => MatchesNotifier(MatchesState(
             matchesModelObj: MatchesModel(matchesItemList: [
-          MatchesItemModel(icon: ImageConstant.imgIconHome),
+          MatchesItemModel(icon: ImageConstant.imgFashion),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
-          MatchesItemModel(icon: ImageConstant.imgIconHome),
+          MatchesItemModel(icon: ImageConstant.imgFashion),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
-          MatchesItemModel(icon: ImageConstant.imgIconHome),
+          MatchesItemModel(icon: ImageConstant.imgFashion),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
-          MatchesItemModel(icon: ImageConstant.imgIconHome),
+          MatchesItemModel(icon: ImageConstant.imgFashion),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40),
           MatchesItemModel(icon: ImageConstant.imgIcon40x40)
         ], matchItemList: [
