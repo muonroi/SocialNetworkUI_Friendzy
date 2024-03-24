@@ -16,8 +16,6 @@ class MainMessageScreen extends ConsumerStatefulWidget {
 }
 
 class MainMessagesScreenState extends ConsumerState<MainMessageScreen> {
-  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
     return Container(
