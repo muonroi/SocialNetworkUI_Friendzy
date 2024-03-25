@@ -168,7 +168,7 @@ class TravelItemWidget extends StatelessWidget {
                                     imagePath: ImageConstant.imgIcon40x40,
                                   ),
                                   onTap: () => onTapScreenTitle(
-                                      AppRoutes.datingProfileDetailScreen)),
+                                      AppRoutes.firstMessageScreen)),
                             ),
                           ],
                         ),

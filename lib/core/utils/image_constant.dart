@@ -54,10 +54,12 @@ class ImageConstant {
   static String imgIconCloseProfile = '$imagePath/close.svg';
   static String imgIconStartProfile = '$imagePath/startProfile.svg';
   static String imgIconHeartProfile = '$imagePath/heartProfile.svg';
-
   static String imgIconMeasure = '$imagePath/measure.svg';
   static String imgIconLanguage = '$imagePath/language.svg';
   static String imgIconCalendar = '$imagePath/calendar.svg';
   static String imgIconChatBackground = '$imagePath/group_chat_background.svg';
+  static String imgIconMicro = '$imagePath/micro.svg';
+  static String imgIconKeyboard = '$imagePath/icon_keyboard.svg';
+  static String imgIconTouchItem = '$imagePath/touch_item.svg';
   static String imageNotFound = '$imagePath/image_not_found.png';
 }

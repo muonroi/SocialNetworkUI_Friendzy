@@ -308,4 +308,5 @@ enum LocalizationKeys {
   msgOutOfCard,
   msgUrlInvalid,
   lblMatch,
+  lblTimeConnected,
 }
