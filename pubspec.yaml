@@ -54,6 +54,7 @@ dependencies:
   bottom_sheet: ^4.0.1
   flutter_touch_ripple: ^1.1.21
   video_player: ^2.8.3
+  flutter_chat_ui: ^1.6.12
 dev_dependencies:
   flutter_test:
     sdk: flutter

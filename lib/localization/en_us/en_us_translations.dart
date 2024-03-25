@@ -1,6 +1,7 @@
 import 'package:muonroi_friends/localization/enums/localization_code.dart';
 
 final Map<String, String> enUs = {
+  LocalizationKeys.lblTimeConnected.name: "%s %s ago",
   LocalizationKeys.lblMatch.name: "Match",
   LocalizationKeys.msgUrlInvalid.name: "Invalid path!",
   LocalizationKeys.msgOutOfCard.name:
@@ -177,7 +178,7 @@ final Map<String, String> enUs = {
   LocalizationKeys.lblKnowWhen.name: "Know when ",
   LocalizationKeys.lblWith.name: " with",
   LocalizationKeys.lblYou2.name: "You ",
-  LocalizationKeys.msgClaraHasReadYour.name: "Clara has read your message",
+  LocalizationKeys.msgClaraHasReadYour.name: "%s has read your message",
   LocalizationKeys.msgGetReadReceipts.name: "Get Read Receipts",
   LocalizationKeys.msgKnowWhenClara.name:
       "Know when Clara has read your message",
