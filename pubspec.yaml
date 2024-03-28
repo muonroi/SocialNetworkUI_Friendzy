@@ -55,6 +55,16 @@ dependencies:
   flutter_touch_ripple: ^1.1.21
   video_player: ^2.8.3
   flutter_chat_ui: ^1.6.12
+  voice_message_package: ^2.1.4
+  audio_waveforms: ^1.0.5
+  permission_handler: ^11.3.1
+  flutter_chat_types: ^3.6.2
+  open_filex: ^4.4.0
+  path_provider: ^2.1.2
+  uuid: ^4.3.3
+  mime: ^1.0.5
+  http: ^1.2.1
+  file_picker: ^8.0.0+1
 dev_dependencies:
   flutter_test:
     sdk: flutter

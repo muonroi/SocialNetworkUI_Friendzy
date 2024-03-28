@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:muonroi_friends/firebase_options.dart';
 import 'core/app_export.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -28,7 +29,8 @@ void main() async {
       androidProvider: AndroidProvider.debug,
       appleProvider: AppleProvider.appAttest,
     );
-    runApp(const ProviderScope(child: SocialNetwork()));
+    initializeDateFormatting()
+        .then((value) => runApp(const ProviderScope(child: SocialNetwork())));
   });
 }
 

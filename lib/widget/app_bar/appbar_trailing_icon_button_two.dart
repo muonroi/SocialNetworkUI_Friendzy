@@ -4,8 +4,8 @@ import 'package:muonroi_friends/widget/custom_icon_button.dart';
 import 'package:muonroi_friends/widget/custom_image_view.dart';
 
 // ignore: must_be_immutable
-class AppbarTrailingIconbuttonTwo extends StatelessWidget {
-  AppbarTrailingIconbuttonTwo({
+class AppbarTrailingIconbuttonAction extends StatelessWidget {
+  AppbarTrailingIconbuttonAction({
     Key? key,
     this.imagePath,
     this.margin,
@@ -25,11 +25,11 @@ class AppbarTrailingIconbuttonTwo extends StatelessWidget {
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
         child: CustomIconButton(
-          height: 40.adaptSize,
-          width: 40.adaptSize,
+          height: 25.adaptSize,
+          width: 25.adaptSize,
           decoration: IconButtonStyleHelper.outlineOnErrorContainer,
           child: CustomImageView(
-            imagePath: ImageConstant.imgIcon1,
+            imagePath: ImageConstant.imgDetailSetting,
           ),
         ),
       ),

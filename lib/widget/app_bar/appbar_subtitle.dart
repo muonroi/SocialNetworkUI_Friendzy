@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muonroi_friends/theme/theme_helper.dart';
+import 'package:muonroi_friends/core/app_export.dart';
 
 // ignore: must_be_immutable
 class AppbarSubtitle extends StatelessWidget {
@@ -25,8 +25,8 @@ class AppbarSubtitle extends StatelessWidget {
         child: Text(
           text,
           style: theme.textTheme.headlineSmall!.copyWith(
-            color: theme.colorScheme.onErrorContainer.withOpacity(1),
-          ),
+              color: theme.colorScheme.onErrorContainer.withOpacity(1),
+              fontSize: 20.adaptSize),
         ),
       ),
     );

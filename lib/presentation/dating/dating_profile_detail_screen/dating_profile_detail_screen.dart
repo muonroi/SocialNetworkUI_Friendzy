@@ -35,8 +35,8 @@ class DatingProfileDetailScreenState
   void _showSheetWithoutList() {
     showStickyFlexibleBottomSheet<void>(
       isModal: false,
-      minHeight: 0.5,
-      initHeight: 0.5,
+      minHeight: 0.4,
+      initHeight: 0.4,
       maxHeight: .70,
       headerHeight: 0,
       context: context,

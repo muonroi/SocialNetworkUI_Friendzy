@@ -45,7 +45,6 @@ class HomeMakeFriendsTabScreen extends ConsumerStatefulWidget {
 class HomeMakeFriendsTabScreenState
     extends ConsumerState<HomeMakeFriendsTabScreen>
     with TickerProviderStateMixin {
-  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
   @override
   void initState() {
     super.initState();

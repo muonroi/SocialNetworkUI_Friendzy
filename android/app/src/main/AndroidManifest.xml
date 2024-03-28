@@ -29,12 +29,17 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <!-- Auto retreive SMS codes -->
-        <receiver android:exported="true" android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver" android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </receiver>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package="com.muonroi.friendzy">
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 </manifest>

@@ -9,11 +9,20 @@ final messagesNotifier = StateNotifierProvider<MessagesNotifier, MessagesState>(
     (ref) => MessagesNotifier(MessagesState(
             messagesModelObj: MessagesModel(storiesViewModel: [
           StoryFriendViewModel(
-              id: 1, imageFriendUrl: '', idOfFriend: 1, likeCount: 32),
+              id: 1,
+              imageFriendUrl: ImageConstant.imgIcon24x24,
+              idOfFriend: 1,
+              likeCount: 32),
           StoryFriendViewModel(
-              id: 1, imageFriendUrl: '', idOfFriend: 1, likeCount: 32),
+              id: 1,
+              imageFriendUrl: ImageConstant.imgIcon24x24,
+              idOfFriend: 1,
+              likeCount: 32),
           StoryFriendViewModel(
-              id: 1, imageFriendUrl: '', idOfFriend: 1, likeCount: 32)
+              id: 1,
+              imageFriendUrl: ImageConstant.imgIcon24x24,
+              idOfFriend: 1,
+              likeCount: 32)
         ], chatList: [
           ChatBoxViewModel(
               friendName: "Alfredo Calzoni",
