@@ -17,7 +17,7 @@ class ImageConstant {
   static String imgArrowDown = '$imagePath/img_arrow_down.svg';
   static String likeIcon = '$imagePath/like.png';
   static String imgIcon40x40 = '$imagePath/img_icon_40x40.svg';
-  static String imgIcon1 = '$imagePath/img_icon_1.svg';
+  static String imgDetailSetting = '$imagePath/img_icon_1.svg';
   static String imgFlatcoloriconsgoogle =
       '$imagePath/img_flatcoloriconsgoogle.svg';
   static String imgIconOnerrorcontainer =

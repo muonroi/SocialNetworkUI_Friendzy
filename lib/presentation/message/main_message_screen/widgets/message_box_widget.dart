@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_touch_ripple/widgets/widget.dart';
 import 'package:muonroi_friends/core/app_export.dart';
+import 'package:muonroi_friends/main.dart';
 import 'package:muonroi_friends/presentation/message/main_message_screen/models/chat_box_model.dart';
 
 // ignore: must_be_immutable
@@ -15,7 +16,7 @@ class ChatBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TouchRipple(
-      onTap: () {},
+      onTap: () => onTapScreenTitle(AppRoutes.textMessageScreen),
       borderRadius: BorderRadius.circular(8),
       child: Padding(
         padding: const EdgeInsets.all(2.0),

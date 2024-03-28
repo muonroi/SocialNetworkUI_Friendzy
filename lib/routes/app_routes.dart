@@ -16,6 +16,7 @@ import 'package:muonroi_friends/presentation/login/login_upload_screen/login_upl
 import 'package:muonroi_friends/presentation/login/login_validate_otp_screen/login_validate_otp_screen.dart';
 import 'package:muonroi_friends/presentation/message/first_message_screen/first_message_screen.dart';
 import 'package:muonroi_friends/presentation/message/main_message_screen/main_message_screen.dart';
+import 'package:muonroi_friends/presentation/message/text_chat_screen/text_chat_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding/onboarding_one_screen/onboarding_one_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding/onboarding_three_screen/onboarding_three_screen.dart';
 import 'package:muonroi_friends/presentation/onboarding/onboarding_two_screen/onboarding_two_screen.dart';
@@ -50,6 +51,7 @@ class AppRoutes {
       '/dating_profile_detail_screen';
   static const String mainMessageScreen = '/main_message_screen';
   static const String firstMessageScreen = '/first_message_screen';
+  static const String textMessageScreen = '/text_message_screen';
   static Map<String, WidgetBuilder> routes = {
     spashScreen: (context) => const SplashScreen(),
     initialRoute: (context) => const SplashScreen(),
@@ -73,5 +75,6 @@ class AppRoutes {
     datingProfileDetailScreen: (context) => const DatingProfileDetailScreen(),
     mainMessageScreen: (context) => const MainMessageScreen(),
     firstMessageScreen: (context) => const FirstTimeChatScreen(),
+    textMessageScreen: (context) => const MessageTextScreen(),
   };
 }

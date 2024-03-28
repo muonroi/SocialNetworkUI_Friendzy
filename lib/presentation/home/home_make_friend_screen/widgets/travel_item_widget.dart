@@ -183,7 +183,7 @@ class TravelItemWidget extends StatelessWidget {
                           decoration:
                               IconButtonStyleHelper.fillOnErrorContainer,
                           child: CustomImageView(
-                            imagePath: ImageConstant.imgIcon1,
+                            imagePath: ImageConstant.imgDetailSetting,
                           ),
                         ),
                       ),
